@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-01-22
+
+### Added
+- **Tailwind CSS v4 support** with native `@theme` CSS variables
+- `generateM3ThemeCSS()` function for programmatic CSS theme generation
+- CLI tool with `init` and `generate` commands
+- Configuration file support via `m3-colors.config.json`
+- OKLCH color format output with hex fallback option
+- Flexible output modes: combined, light-only, or dark-only themes
+- Input validation for colors, schemes, and contrast values
+- New `/v4` export path for v4-specific functionality
+
+### Changed
+- Reorganized internal code structure for better maintainability
+- Extracted shared color generation logic into reusable modules
+- Updated package description and keywords
+
+### Maintained
+- Full backward compatibility with Tailwind v3
+- All existing `M3TailwindConfigColors` and `M3TailwindRNColors` APIs unchanged
+- React Native support remains identical
+
 ## [Unreleased]
 
 ### Changed

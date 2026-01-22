@@ -1,15 +1,23 @@
 {
   "name": "m3-tailwind-colors",
-  "version": "0.1.5",
-  "description": "Generate Material 3 colors for Tailwind and NativeWind.",
+  "version": "0.2.0",
+  "description": "Generate Material 3 colors for Tailwind CSS (v3 and v4) and NativeWind.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "bin": {
+    "m3-tailwind-colors": "./dist/cli.js"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./v4": {
+      "types": "./dist/v4.d.ts",
+      "import": "./dist/v4.mjs",
+      "require": "./dist/v4.js"
     }
   },
   "scripts": {
@@ -25,7 +33,8 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@material/material-color-utilities": "^0.3.0"
+    "@material/material-color-utilities": "^0.3.0",
+    "commander": "^14.0.2"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
@@ -34,11 +43,14 @@
   },
   "keywords": [
     "tailwind",
+    "tailwindcss",
+    "tailwind-v4",
     "material-design",
     "material-3",
     "colors",
     "nativewind",
-    "react-native"
+    "react-native",
+    "css-variables"
   ],
   "author": "Somtochukwu Anunobi",
   "license": "MIT",
