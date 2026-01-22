@@ -37,6 +37,7 @@
     "commander": "^14.0.2"
   },
   "devDependencies": {
+    "@types/node": "^25.0.10",
     "tsup": "^8.0.0",
     "typescript": "^5.5.4",
     "vitest": "^1.0.0"
