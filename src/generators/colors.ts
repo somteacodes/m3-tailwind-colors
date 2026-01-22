@@ -2,7 +2,6 @@ import {
     argbFromHex,
     hexFromArgb,
     customColor,
-    Hct,
     DynamicColor,
 } from "@material/material-color-utilities";
 import { AllMaterialDynamicColors, getSchemeObject } from "./scheme-utils";
@@ -26,9 +25,10 @@ const toKebabCase = (str: string): string => {
     return str
         .split("")
         .map((char, index) => {
-            return char.toUpperCase() === char
-                ? `${index !== 0 ? "-" : ""}${char.toLowerCase()}`
-                : char;
+            if (char.toUpperCase() === char) {
+                return `${index !== 0 ? "-" : ""}${char.toLowerCase()}`;
+            }
+            return char;
         })
         .join("");
 };

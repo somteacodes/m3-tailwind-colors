@@ -8,7 +8,6 @@ import {
     SchemeNeutral,
     SchemeTonalSpot,
     SchemeVibrant,
-    DynamicColor,
 } from "@material/material-color-utilities";
 
 type SchemeObject =

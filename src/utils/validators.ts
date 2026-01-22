@@ -57,9 +57,7 @@ export function validateContrast(contrast: number): void {
  */
 export function validateColors(colors: Record<string, string>): void {
     Object.entries(colors).forEach(([name, color]) => {
-        try {
-            validateHexColor(color);
-        } catch (error) {
+        if (!/^#[0-9A-Fa-f]{6}$/.test(color)) {
             throw new Error(
                 `Invalid ${name} color: ${color}. Expected hex format (#RRGGBB)`
             );
