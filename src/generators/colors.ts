@@ -21,12 +21,14 @@ export type ThemeConfig = {
     contrast: number;
 };
 
+const DEFAULT_THEME_CONFIG: ThemeConfig = { scheme: "content", contrast: 0 };
+
 const toKebabCase = (str: string): string => {
     return str
         .split("")
         .map((char, index) => {
             if (char.toUpperCase() === char) {
-                return `${index !== 0 ? "-" : ""}${char.toLowerCase()}`;
+                return `${index === 0 ? "" : "-"}${char.toLowerCase()}`;
             }
             return char;
         })
@@ -43,7 +45,7 @@ const toKebabCase = (str: string): string => {
  */
 export const generateColors = (
     colorsMap: ColorsMap,
-    themeConfig: ThemeConfig = { scheme: "content", contrast: 0 },
+    themeConfig: ThemeConfig = DEFAULT_THEME_CONFIG,
     isDark = false,
     useKebabCase = false
 ): Record<string, string> => {
