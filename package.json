@@ -3,26 +3,34 @@
   "version": "0.1.5",
   "description": "Generate Material 3 colors for Tailwind and NativeWind.",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "rollup -c",
-    "prepare": "npm run build",
-    "publish": "npm publish"
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@material/material-color-utilities": "^0.3.0"
   },
   "devDependencies": {
+    "tsup": "^8.0.0",
     "typescript": "^5.5.4",
-    "rollup": "^4.21.1",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "vitest": "^1.0.0"
   },
   "keywords": [
     "tailwind",
