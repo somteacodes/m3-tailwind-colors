@@ -33,15 +33,10 @@ function buildColorsMap(colors: M3ColorsConfig["colors"]): ColorsMap {
 }
 
 /**
- * Handle the generate command
- * @param options - CLI options
+ * Resolve configuration from file and flags
  */
-export function handleGenerate(options: GenerateOptions): void {
-    // Try to load config file
+function resolveConfig(options: GenerateOptions): M3ColorsConfig {
     const loadedConfig = loadConfig(options.config);
-
-    // Build config from flags or loaded config
-    let config: M3ColorsConfig;
 
     if (loadedConfig) {
         // Merge loaded config with CLI flags
@@ -50,7 +45,7 @@ export function handleGenerate(options: GenerateOptions): void {
         if (options.secondary) flagColors.secondary = options.secondary;
         if (options.tertiary) flagColors.tertiary = options.tertiary;
 
-        config = mergeConfigWithFlags(loadedConfig, {
+        return mergeConfigWithFlags(loadedConfig, {
             colors: Object.keys(flagColors).length > 0 ? flagColors : undefined,
             scheme: options.scheme,
             contrast: options.contrast ? Number.parseFloat(options.contrast) : undefined,
@@ -58,9 +53,11 @@ export function handleGenerate(options: GenerateOptions): void {
             mode: options.mode,
             output: options.output,
         });
-    } else if (options.primary) {
+    }
+
+    if (options.primary) {
         // Use flags only - build config from scratch
-        config = {
+        return {
             colors: {
                 primary: options.primary,
                 secondary: options.secondary,
@@ -72,11 +69,20 @@ export function handleGenerate(options: GenerateOptions): void {
             mode: options.mode || "combined",
             output: options.output || "src/m3-theme.css",
         };
-    } else {
-        console.error("Error: Primary color is required");
-        console.error("  Add --primary \"#0062A8\" or create a config file");
-        process.exit(1);
     }
+
+    console.error("Error: Primary color is required");
+    console.error("  Add --primary \"#0062A8\" or create a config file");
+    process.exit(1);
+}
+
+/**
+ * Handle the generate command
+ * @param options - CLI options
+ */
+export function handleGenerate(options: GenerateOptions): void {
+    // Build config from flags or loaded config
+    const config = resolveConfig(options);
 
     // Build colors map for validation (filter out undefined)
     const colorsMap = buildColorsMap(config.colors);
