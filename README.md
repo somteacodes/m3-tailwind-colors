@@ -1,6 +1,14 @@
 # M3 Tailwind Colors
 
+![npm version](https://img.shields.io/npm/v/m3-tailwind-colors)
+![License](https://img.shields.io/github/license/somteacodes/m3tailwindcolorgenerator)
+![Build Status](https://img.shields.io/github/actions/workflow/status/somteacodes/m3tailwindcolorgenerator/ci.yml)
+
 **M3 Tailwind Colors** is a utility package that generates Material 3 colors for use with Tailwind CSS, specifically designed to integrate seamlessly with Tailwind and NativeWind (React Native).
+
+## Demo
+
+[View Live Demo](https://m3-tailwind-colors-demo.vercel.app/) _(Coming Soon)_
 
 ## Features
 
@@ -8,7 +16,7 @@
 - Easily integrate with Tailwind CSS or NativeWind projects.
 - Supports both light and dark color schemes.
 
-Read more about how it works [text](https://m3.material.io/styles/color/system/how-the-system-works)
+Read more about how it works [here](https://m3.material.io/styles/color/system/how-the-system-works)
 
 ## Installation
 
@@ -18,7 +26,7 @@ First, install the package via npm:
 npm install m3-tailwind-colors
 ```
 
-This will automatically install the necessary dependencies, including @material/material-color-utilities.
+This will automatically install the necessary dependencies, including `@material/material-color-utilities`.
 
 ## Usage
 
