@@ -17,8 +17,8 @@ export interface V4ThemeOptions {
     mode?: "combined" | "light" | "dark";
     /** Include @import "tailwindcss" directive */
     includeTailwindImport?: boolean;
-    /** Include @custom-variant dark declaration */
-    includeDarkVariant?: boolean;
+    /** Dark mode strategy: media (prefers-color-scheme) or class (.dark) */
+    darkModeStrategy?: "media" | "class" | "none";
 }
 
 /**
@@ -39,7 +39,7 @@ function generateThemeBlock(
 }
 
 /**
- * Generate @variant dark block with color variables
+ * Generate @variant dark block with color variables (class strategy)
  */
 function generateVariantBlock(
     colors: Record<string, string>,
@@ -53,6 +53,23 @@ function generateVariantBlock(
         .join("\n");
 
     return `@variant dark {\n${colorVars}\n}`;
+}
+
+/**
+ * Generate @media prefers-color-scheme block (media strategy)
+ */
+function generateMediaDarkBlock(
+    colors: Record<string, string>,
+    format: "hex" | "oklch"
+): string {
+    const colorVars = Object.entries(colors)
+        .map(([name, hex]) => {
+            const value = formatColorValue(hex, format);
+            return `    --color-${name}: ${value};`;
+        })
+        .join("\n");
+
+    return `@media (prefers-color-scheme: dark) {\n  :root {\n${colorVars}\n  }\n}`;
 }
 
 /**
@@ -78,7 +95,7 @@ export function generateM3ThemeCSS(options: V4ThemeOptions): string {
         format = "hex",
         mode = "combined",
         includeTailwindImport = false,
-        includeDarkVariant = true,
+        darkModeStrategy = "media",
     } = options;
 
     const themeConfig: ThemeConfig = { scheme, contrast };
@@ -91,8 +108,8 @@ export function generateM3ThemeCSS(options: V4ThemeOptions): string {
         css += '@import "tailwindcss";\n\n';
     }
 
-    // Add dark mode custom variant declaration
-    if (includeDarkVariant && mode === "combined") {
+    // Add dark mode custom variant declaration (only for class strategy)
+    if (darkModeStrategy === "class" && mode === "combined") {
         css += '@custom-variant dark (&:where(.dark, .dark *));\n\n';
     }
 
@@ -107,8 +124,15 @@ export function generateM3ThemeCSS(options: V4ThemeOptions): string {
         const darkColors = generateColors(colorsMap, themeConfig, true, true);
         css += generateThemeBlock(lightColors, format);
         css += "\n\n";
-        css += generateVariantBlock(darkColors, format);
+
+        if (darkModeStrategy === "media") {
+            css += generateMediaDarkBlock(darkColors, format);
+        } else if (darkModeStrategy === "class") {
+            css += generateVariantBlock(darkColors, format);
+        }
+        // darkModeStrategy === "none" - no dark mode output
     }
 
     return css;
 }
+

@@ -16,7 +16,7 @@ interface GenerateOptions {
     output?: string;
     config?: string;
     includeTailwindImport?: boolean;
-    darkVariant?: boolean;
+    darkMode?: "media" | "class" | "none";
 }
 
 /**
@@ -111,7 +111,7 @@ export function handleGenerate(options: GenerateOptions): void {
         format: config.format,
         mode: config.mode,
         includeTailwindImport: options.includeTailwindImport ?? false,
-        includeDarkVariant: options.darkVariant ?? true,
+        darkModeStrategy: options.darkMode ?? "media",
     });
 
     // Ensure output directory exists
