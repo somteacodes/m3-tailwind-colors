@@ -15,7 +15,7 @@
 
 ## Demo
 
-[View Live Demo](https://m3-tailwind-colors-demo.vercel.app/) _(Coming Soon)_
+[View Live Demo](#) _(Coming Soon)_
 
 ## Features
 
