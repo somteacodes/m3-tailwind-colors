@@ -242,6 +242,56 @@ Add `target` to your `m3-colors.config.json`:
 }
 ```
 
+### Migrating from NativeWindUI Starter
+
+If you're using the NativeWindUI starter template, the generated M3 colors use different names. Update your `theme/index.ts`:
+
+```typescript
+// theme/index.ts
+import { Theme, DefaultTheme, DarkTheme } from '@react-navigation/native';
+import { COLORS } from './colors';
+
+const NAV_THEME: { light: Theme; dark: Theme } = {
+  light: {
+    dark: false,
+    colors: {
+      background: COLORS.light.background,
+      border: COLORS.light.outlineVariant,     // was: grey5
+      card: COLORS.light.surface,               // was: card
+      notification: COLORS.light.error,         // was: destructive
+      primary: COLORS.light.primary,
+      text: COLORS.light.onBackground,          // was: COLORS.black
+    },
+    fonts: DefaultTheme.fonts,
+  },
+  dark: {
+    dark: true,
+    colors: {
+      background: COLORS.dark.background,
+      border: COLORS.dark.outlineVariant,       // was: grey5
+      card: COLORS.dark.surfaceContainer,       // was: grey6
+      notification: COLORS.dark.error,          // was: destructive
+      primary: COLORS.dark.primary,
+      text: COLORS.dark.onBackground,           // was: COLORS.white
+    },
+    fonts: DarkTheme.fonts,
+  },
+};
+
+export { NAV_THEME };
+```
+
+**Color name mappings:**
+
+| NativeWindUI | M3 Equivalent |
+|--------------|---------------|
+| `grey6` | `surfaceContainerLowest` |
+| `grey5` | `outlineVariant` |
+| `card` | `surface` or `surfaceContainer` |
+| `destructive` | `error` |
+| `COLORS.white` | Hardcode `'rgb(255,255,255)'` or use `onPrimary` |
+| `COLORS.black` | Hardcode `'rgb(0,0,0)'` or use `onBackground` |
+
 ---
 
 ## Tailwind v3 Usage
