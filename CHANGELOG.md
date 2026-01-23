@@ -27,13 +27,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - All existing `M3TailwindConfigColors` and `M3TailwindRNColors` APIs unchanged
 - React Native support remains identical
 
-## [Unreleased]
+## [0.3.0] - 2026-01-23
+
+### Added
+- **NativeWind support** with `--target nativewind` flag
+- New generators:
+  - `nativewind-css`: Generates `global.css` with space-separated RGB variables
+  - `nativewind-colors`: Generates `theme/m3-colors.ts` with TypeScript types
+- Dark mode strategy options: `--dark-mode <media|class|none>`
+- `--include-tailwind-import` flag to optionally include `@import "tailwindcss"`
+- `--generate` flag for `init` command to create config and generate theme in one step
+- `--colors-output` flag for custom TypeScript colors file path
+- `--target` and `--colors-output` options in `m3-colors.config.json`
 
 ### Changed
-- Migrated build system from Rollup to tsup for faster, simpler builds
+- **CLI Output**: Now builds to ESM (`.mjs`) to fix CommonJS/ESM warnings
+- **Default Format**: CSS generation now defaults to `hex` instead of `oklch`
+- **Error Handling**: Improved error messages with actionable suggestions
+- **Dark Mode**: Generated CSS now includes `@custom-variant dark` by default for proper v4 dark mode support
+- Migrated build system to `tsup`
 - Added Vitest for testing
-- Added GitHub Actions for CI/CD
-- Added Dependabot for dependency updates
+
+### Fixed
+- Fixed missing dark variant declaration in combined mode
 
 ## [0.1.5] - 2024
 
