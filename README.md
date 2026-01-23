@@ -171,6 +171,79 @@ Example `m3-colors.config.json`:
 
 ---
 
+## NativeWind Usage (React Native)
+
+Generate Material 3 colors for NativeWind projects with the `--target nativewind` flag.
+
+### Quick Start
+
+```bash
+npx m3-tailwind-colors generate --target nativewind --primary "#0062A8"
+```
+
+This generates two files:
+- `global.css` - CSS variables in NativeWind format
+- `theme/m3-colors.ts` - TypeScript colors for React Native
+
+### Generated CSS Format
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 0 74 129;
+    --on-primary: 255 255 255;
+    --android-primary: 0 74 129;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: 160 201 255;
+    }
+  }
+}
+```
+
+### Generated TypeScript Colors
+
+```typescript
+export const COLORS = {
+  light: {
+    primary: 'rgb(0, 74, 129)',
+    onPrimary: 'rgb(255, 255, 255)',
+  },
+  dark: {
+    primary: 'rgb(160, 201, 255)',
+  },
+} as const;
+```
+
+### Custom Output Paths
+
+```bash
+npx m3-tailwind-colors generate \
+  --target nativewind \
+  --primary "#0062A8" \
+  --output "src/global.css" \
+  --colors-output "src/theme/colors.ts"
+```
+
+### Configuration File
+
+Add `target` to your `m3-colors.config.json`:
+
+```json
+{
+  "colors": { "primary": "#0062A8" },
+  "target": "nativewind",
+  "colorsOutput": "theme/m3-colors.ts"
+}
+```
+
+---
+
 ## Tailwind v3 Usage
 
 To use the generated colors in your Tailwind CSS configuration, follow these steps:

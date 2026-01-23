@@ -44,6 +44,8 @@ program
     .option("--config <path>", "Config file path", "m3-colors.config.json")
     .option("--include-tailwind-import", "Include @import 'tailwindcss' in output")
     .option("--dark-mode <strategy>", "Dark mode strategy: media (default) or class", "media")
+    .option("--target <platform>", "Target platform: web (default) or nativewind", "web")
+    .option("--colors-output <path>", "Output path for TypeScript colors file (NativeWind)")
     .action((options) => {
         handleGenerate(options);
     });

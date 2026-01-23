@@ -15,6 +15,10 @@ export interface M3ColorsConfig {
     format?: "hex" | "oklch";
     mode?: "combined" | "light" | "dark";
     output?: string;
+    /** Target platform: web (default) or nativewind */
+    target?: "web" | "nativewind";
+    /** Output path for TypeScript colors file (NativeWind only) */
+    colorsOutput?: string;
 }
 
 const DEFAULT_CONFIG_PATH = "m3-colors.config.json";
@@ -81,6 +85,8 @@ export function mergeConfigWithFlags(
         format: flags.format ?? config.format,
         mode: flags.mode ?? config.mode,
         output: flags.output ?? config.output,
+        target: flags.target ?? config.target,
+        colorsOutput: flags.colorsOutput ?? config.colorsOutput,
         colors: mergedColors,
     };
 }
