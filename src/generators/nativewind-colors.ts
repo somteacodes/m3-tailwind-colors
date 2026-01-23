@@ -14,7 +14,7 @@ function hexToRgb(hex: string): string {
  * Convert kebab-case to camelCase
  */
 function toCamelCase(str: string): string {
-    return str.replace(/-([a-z])/g, (_: string, letter: string) => letter.toUpperCase());
+    return str.replaceAll(/-([a-z])/g, (_: string, letter: string) => letter.toUpperCase());
 }
 
 /**
