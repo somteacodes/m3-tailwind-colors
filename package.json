@@ -1,36 +1,60 @@
 {
   "name": "m3-tailwind-colors",
-  "version": "0.1.5",
-  "description": "Generate Material 3 colors for Tailwind and NativeWind.",
+  "version": "0.3.3",
+  "description": "Generate Material 3 colors for Tailwind CSS (v3 and v4) and NativeWind.",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "bin": {
+    "m3-tailwind-colors": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./v4": {
+      "types": "./dist/v4.d.ts",
+      "import": "./dist/v4.mjs",
+      "require": "./dist/v4.js"
+    }
+  },
   "scripts": {
-    "build": "rollup -c",
-    "prepare": "npm run build",
-    "publish": "npm publish"
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "@material/material-color-utilities": "^0.3.0"
+    "@material/material-color-utilities": "^0.3.0",
+    "commander": "^14.0.2"
   },
   "devDependencies": {
+    "@types/node": "^25.0.10",
+    "tsup": "^8.0.0",
     "typescript": "^5.5.4",
-    "rollup": "^4.21.1",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "vitest": "^1.0.0"
   },
   "keywords": [
     "tailwind",
+    "tailwindcss",
+    "tailwind-v4",
     "material-design",
     "material-3",
     "colors",
     "nativewind",
-    "react-native"
+    "react-native",
+    "css-variables"
   ],
   "author": "Somtochukwu Anunobi",
   "license": "MIT",
