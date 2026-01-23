@@ -1,6 +1,6 @@
 {
   "name": "m3-tailwind-colors",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generate Material 3 colors for Tailwind CSS (v3 and v4) and NativeWind.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
