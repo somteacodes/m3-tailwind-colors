@@ -15,6 +15,8 @@ interface GenerateOptions {
     mode?: "combined" | "light" | "dark";
     output?: string;
     config?: string;
+    includeTailwindImport?: boolean;
+    darkVariant?: boolean;
 }
 
 /**
@@ -65,14 +67,14 @@ function resolveConfig(options: GenerateOptions): M3ColorsConfig {
             },
             scheme: options.scheme || "content",
             contrast: options.contrast ? Number.parseFloat(options.contrast) : 0,
-            format: options.format || "oklch",
+            format: options.format || "hex",
             mode: options.mode || "combined",
             output: options.output || "src/m3-theme.css",
         };
     }
 
-    console.error("Error: Primary color is required");
-    console.error("  Add --primary \"#0062A8\" or create a config file");
+    console.error("Error: Primary color is required.");
+    console.error("  Use --primary \"#HEXCODE\" flag, or create a config file with: npx m3-tailwind-colors init");
     process.exit(1);
 }
 
@@ -108,6 +110,8 @@ export function handleGenerate(options: GenerateOptions): void {
         contrast: config.contrast,
         format: config.format,
         mode: config.mode,
+        includeTailwindImport: options.includeTailwindImport ?? false,
+        includeDarkVariant: options.darkVariant ?? true,
     });
 
     // Ensure output directory exists

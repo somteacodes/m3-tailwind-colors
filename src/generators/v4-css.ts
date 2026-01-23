@@ -16,7 +16,9 @@ export interface V4ThemeOptions {
     /** Output mode */
     mode?: "combined" | "light" | "dark";
     /** Include @import "tailwindcss" directive */
-    includeImport?: boolean;
+    includeTailwindImport?: boolean;
+    /** Include @custom-variant dark declaration */
+    includeDarkVariant?: boolean;
 }
 
 /**
@@ -63,7 +65,7 @@ function generateVariantBlock(
  * ```typescript
  * const css = generateM3ThemeCSS({
  *   colors: { primary: "#0062A8" },
- *   format: "oklch",
+ *   format: "hex",
  *   mode: "combined"
  * });
  * ```
@@ -73,9 +75,10 @@ export function generateM3ThemeCSS(options: V4ThemeOptions): string {
         colors: colorsMap,
         scheme = "content",
         contrast = 0,
-        format = "oklch",
+        format = "hex",
         mode = "combined",
-        includeImport = true,
+        includeTailwindImport = false,
+        includeDarkVariant = true,
     } = options;
 
     const themeConfig: ThemeConfig = { scheme, contrast };
@@ -84,8 +87,13 @@ export function generateM3ThemeCSS(options: V4ThemeOptions): string {
     let css = "";
 
     // Add import directive
-    if (includeImport) {
+    if (includeTailwindImport) {
         css += '@import "tailwindcss";\n\n';
+    }
+
+    // Add dark mode custom variant declaration
+    if (includeDarkVariant && mode === "combined") {
+        css += '@custom-variant dark (&:where(.dark, .dark *));\n\n';
     }
 
     // Generate based on mode

@@ -24,6 +24,7 @@ program
     .option("--mode <mode>", "Output mode (combined, light, or dark)")
     .option("--output <path>", "Output CSS file path")
     .option("--config <path>", "Config file path", "m3-colors.config.json")
+    .option("--generate", "Also generate CSS file after creating config")
     .action((options) => {
         handleInit(options);
     });
@@ -41,6 +42,8 @@ program
     .option("--mode <mode>", "Output mode (combined, light, or dark)")
     .option("--output <path>", "Output CSS file path")
     .option("--config <path>", "Config file path", "m3-colors.config.json")
+    .option("--include-tailwind-import", "Include @import 'tailwindcss' in output")
+    .option("--no-dark-variant", "Exclude @custom-variant dark from output")
     .action((options) => {
         handleGenerate(options);
     });

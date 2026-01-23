@@ -28,6 +28,8 @@
 
 Read more about how it works [here](https://m3.material.io/styles/color/system/how-the-system-works)
 
+> **How it works:** When only a primary color is provided, it is used as a seed color to generate the entire Material 3 palette including secondary, tertiary, surface, and all other color tokens according to Material Design 3 guidelines.
+
 ## Installation
 
 Install the package via npm:
@@ -37,6 +39,8 @@ npm install m3-tailwind-colors
 ```
 
 This will automatically install the necessary dependencies, including `@material/material-color-utilities`.
+
+> **Note:** Tailwind CSS must already be set up in your project before using this package.
 
 ## Quick Start
 
@@ -101,20 +105,24 @@ Generates the CSS theme file:
 npx m3-tailwind-colors generate
 ```
 
+**Options:**
+- `--include-tailwind-import` - Include `@import "tailwindcss"` in output
+- `--no-dark-variant` - Exclude `@custom-variant dark` from output
+
 This reads your `m3-colors.config.json` and outputs CSS like:
 
 ```css
-@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary: oklch(0.45 0.13 241.52);
-  --color-on-primary: oklch(1 0 0);
-  --color-surface: oklch(0.98 0.01 264.05);
+  --color-primary: #3b82f6;
+  --color-on-primary: #ffffff;
+  --color-surface: #fafafa;
   /* ... all Material 3 color tokens */
 }
 
 @variant dark {
-  --color-primary: oklch(0.78 0.17 267.12);
+  --color-primary: #60a5fa;
   /* ... dark mode colors */
 }
 ```
@@ -131,11 +139,12 @@ const css = generateM3ThemeCSS({
     secondary: "#CBF7ED",
     tertiary: "#F98948"
   },
-  format: "oklch",    // or "hex"
+  format: "hex",      // or "oklch"
   mode: "combined",   // or "light" or "dark"
   scheme: "content",  // Material scheme type
   contrast: 0,        // -1 to 1
-  includeImport: true // Include @import "tailwindcss"
+  includeTailwindImport: false, // Include @import "tailwindcss"
+  includeDarkVariant: true      // Include @custom-variant dark
 });
 
 fs.writeFileSync('./src/theme.css', css);
@@ -154,7 +163,7 @@ Example `m3-colors.config.json`:
   },
   "scheme": "content",
   "contrast": 0,
-  "format": "oklch",
+  "format": "hex",
   "mode": "combined",
   "output": "src/m3-theme.css"
 }

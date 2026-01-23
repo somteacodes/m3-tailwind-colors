@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "m3-tailwind-colors": "./dist/cli.js"
+    "m3-tailwind-colors": "./dist/cli.mjs"
   },
   "exports": {
     ".": {
