@@ -1,9 +1,5 @@
 # M3 Tailwind Colors
 
-![npm version](https://img.shields.io/npm/v/m3-tailwind-colors)
-![License](https://img.shields.io/github/license/somteacodes/m3tailwindcolorgenerator)
-
-
 **M3 Tailwind Colors** is a utility package that generates Material 3 colors for use with Tailwind CSS, specifically designed to integrate seamlessly with Tailwind (v3 and v4) and NativeWind (React Native).
 
 ## Tailwind CSS v4 Support Now Available
