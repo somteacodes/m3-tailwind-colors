@@ -2,27 +2,14 @@
 
 
 
-## [0.2.0] - 2026-01-22
+## [0.3.4] - 2026-01-23
 
-### Added
-- **Tailwind CSS v4 support** with native `@theme` CSS variables
-- `generateM3ThemeCSS()` function for programmatic CSS theme generation
-- CLI tool with `init` and `generate` commands
-- Configuration file support via `m3-colors.config.json`
-- OKLCH color format output with hex fallback option
-- Flexible output modes: combined, light-only, or dark-only themes
-- Input validation for colors, schemes, and contrast values
-- New `/v4` export path for v4-specific functionality
-
-### Changed
-- Reorganized internal code structure for better maintainability
-- Extracted shared color generation logic into reusable modules
-- Updated package description and keywords
-
-### Maintained
-- Full backward compatibility with Tailwind v3
-- All existing `M3TailwindConfigColors` and `M3TailwindRNColors` APIs unchanged
-- React Native support remains identical
+### Fixed
+- **Code Cleanup**: Made the code easier to read and understand
+- **Lint Warning**: Fixed a warning about how text is replaced
+- **Bug Fix**: Fixed a logic error when generating colors
+- **Bug Fix**: Fixed an issue with default settings
+- **Types**: Added missing Typescript definitions for Node.js
 
 ## [0.3.0] - 2026-01-23
 
@@ -47,6 +34,28 @@
 
 ### Fixed
 - Fixed missing dark variant declaration in combined mode
+
+## [0.2.0] - 2026-01-22
+
+### Added
+- **Tailwind CSS v4 support** with native `@theme` CSS variables
+- `generateM3ThemeCSS()` function for programmatic CSS theme generation
+- CLI tool with `init` and `generate` commands
+- Configuration file support via `m3-colors.config.json`
+- OKLCH color format output with hex fallback option
+- Flexible output modes: combined, light-only, or dark-only themes
+- Input validation for colors, schemes, and contrast values
+- New `/v4` export path for v4-specific functionality
+
+### Changed
+- Reorganized internal code structure for better maintainability
+- Extracted shared color generation logic into reusable modules
+- Updated package description and keywords
+
+### Maintained
+- Full backward compatibility with Tailwind v3
+- All existing `M3TailwindConfigColors` and `M3TailwindRNColors` APIs unchanged
+- React Native support remains identical
 
 ## [0.1.5] - 2024
 
