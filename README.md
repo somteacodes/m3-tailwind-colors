@@ -1,17 +1,27 @@
 # M3 Tailwind Colors
 
-**M3 Tailwind Colors** is a utility package that generates Material 3 colors for use with Tailwind CSS, specifically designed to integrate seamlessly with Tailwind (v3 and v4) and NativeWind (React Native).
+**M3 Tailwind Colors** is a utility package that generates Material 3 color based on the Material 3 color system for use with Tailwind CSS and NativeWind.
 
 ## Tailwind CSS v4 Support Now Available
 
-- **Using Tailwind v3?** Your existing setup continues to work.
-- **Ready for v4?** Check out our [CLI and CSS theme generation](#tailwind-v4-usage) below.
-
-[View Migration Guide](#migrating-to-v4)
+- **using Tailwind v4?** Check out our [CLI and CSS theme generation](#tailwind-v4-usage) below.
+- **Migrating from v3 to v4?** Check out our [migration guide](#migrating-to-v4). 
 
 ## Demo
 
-[View Live Demo](#) _(Coming Soon)_
+[View Live Demo](https://deesign.dev/)
+
+## Why M3 Tailwind Colors?
+
+Material 3 offers a robust color system, but manually generating and managing these tonal palettes for Tailwind CSS can be overwhelming.
+
+**This package solves that by:**
+- **Automating Palette Creation**: Generates all required tonal palettes (primary, secondary, error, surface, etc.) from a single color.
+- **Ensuring Accessibility**: Uses the official Material Color Utilities for accessible contrast ratios.
+- **Type Safety**: Provides TypeScript support for React Native (NativeWind) and Tailwind config.
+- **Consistency**: Guarantees your Light and Dark modes are perfectly synchronized.
+
+Simply pick a primary color, and let the tool handle the complex color science.
 
 ## Features
 
@@ -20,7 +30,7 @@
 - **NEW:** CLI tool for easy theme generation
 - Easily integrate with Tailwind CSS or NativeWind projects.
 - Supports both light and dark color schemes.
-- OKLCH color format support (modern, future-proof)
+- Hex and OKLCH color format support. 
 
 Read more about how it works [here](https://m3.material.io/styles/color/system/how-the-system-works)
 
@@ -155,7 +165,11 @@ Example `m3-colors.config.json`:
   "colors": {
     "primary": "#0062A8",
     "secondary": "#CBF7ED",
-    "tertiary": "#F98948"
+    "tertiary": "#F98948",
+    "success": "#16A34A",
+    "error": "#EF4444",
+    "warning": "#D14700",
+    "info": "#0055D1"
   },
   "scheme": "content",
   "contrast": 0,
@@ -164,6 +178,8 @@ Example `m3-colors.config.json`:
   "output": "src/m3-theme.css"
 }
 ```
+
+> **Note:** You can add any custom color key (like `success`, `warning`, `info`) and it will generate a full tonal palette for that color.
 
 ---
 
