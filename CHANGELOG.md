@@ -5,22 +5,14 @@
 ## [0.4.0] - 2026-11-03
 
 ### Added
-- **M3 fixed color roles**: `primary-fixed`, `primary-fixed-dim`, `on-primary-fixed`,
-  `on-primary-fixed-variant`, plus the same four roles for `secondary` and `tertiary`, in every
-  output target (Tailwind v3 config, React Native, Tailwind v4 CSS, NativeWind CSS and TypeScript).
-  Fixed roles keep the same value in light and dark schemes at the default contrast.
-- **Custom color fixed roles**: every custom color now also produces `<name>-fixed`,
-  `<name>-fixed-dim`, `on-<name>-fixed` and `on-<name>-fixed-variant` (tones 90/80/10/30 of its
-  palette, identical in light and dark).
+- **Fixed colors**: Material 3 fixed colors such as `primary-fixed` and `on-primary-fixed`. They stay the same in light and dark mode.
+- **Fixed custom colors**: custom colors get fixed versions too, e.g. `success-fixed`.
+
+### Changed
+- **camelCase custom colors** now always start with a lowercase letter. For example, `SuccessContainer` is now `successContainer`.
 
 ### Fixed
-- **camelCase custom color keys** now start lowercase, matching the built-in camelCase convention:
-  - The container key `SuccessContainer` is now `successContainer`.
-  - A custom color whose name starts with a capital letter (e.g. `Success`) is now emitted as
-    `success` instead of `Success`. Lowercase names are unaffected.
-  - The `on*` keys (`onSuccess`, `onSuccessContainer`) are unchanged.
-
-  Code that references the old capitalised keys needs updating.
+- **CLI version**: `--version` showed `0.2.0` instead of the real version.
 
 ## [0.3.4] - 2026-01-23
 
