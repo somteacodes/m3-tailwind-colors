@@ -3,13 +3,14 @@
 import { Command } from "commander";
 import { handleInit } from "./cli/init";
 import { handleGenerate } from "./cli/generate";
+import { version } from "../package.json";
 
 const program = new Command();
 
 program
     .name("m3-tailwind-colors")
     .description("Generate Material 3 colors for Tailwind CSS v4")
-    .version("0.2.0");
+    .version(version);
 
 // Init command
 program

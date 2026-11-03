@@ -113,13 +113,13 @@ npx m3-tailwind-colors generate
 
 **Options:**
 - `--include-tailwind-import` - Include `@import "tailwindcss"` in output
-- `--no-dark-variant` - Exclude `@custom-variant dark` from output
+- `--dark-mode <strategy>` - Dark mode strategy: `media` (default), `class`, or `none`
+- `--target <platform>` - Target platform: `web` (default) or `nativewind`
+- `--colors-output <path>` - Output path for the TypeScript colors file (NativeWind only)
 
-This reads your `m3-colors.config.json` and outputs CSS like:
+This reads your `m3-colors.config.json` and outputs CSS like this (default `media` strategy):
 
 ```css
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --color-primary: #3b82f6;
   --color-on-primary: #ffffff;
@@ -127,11 +127,31 @@ This reads your `m3-colors.config.json` and outputs CSS like:
   /* ... all Material 3 color tokens */
 }
 
-@variant dark {
-  --color-primary: #60a5fa;
-  /* ... dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #60a5fa;
+    /* ... dark mode colors */
+  }
 }
 ```
+
+With `--dark-mode class`, dark colors apply when a `.dark` class is on an ancestor element:
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #3b82f6;
+  /* ... */
+}
+
+@variant dark {
+  --color-primary: #60a5fa;
+  /* ... */
+}
+```
+
+With `--dark-mode none`, only the light `@theme` block is output.
 
 ### Programmatic API
 
@@ -150,7 +170,7 @@ const css = generateM3ThemeCSS({
   scheme: "content",  // Material scheme type
   contrast: 0,        // -1 to 1
   includeTailwindImport: false, // Include @import "tailwindcss"
-  includeDarkVariant: true      // Include @custom-variant dark
+  darkModeStrategy: "media"     // or "class" or "none"
 });
 
 fs.writeFileSync('./src/theme.css', css);
