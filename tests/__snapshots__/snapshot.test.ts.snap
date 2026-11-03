@@ -1,0 +1,1586 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`snapshot: NativeWind > global.css 1`] = `
+"@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 253 247 255;
+    --on-background: 29 27 32;
+    --surface: 253 247 255;
+    --surface-dim: 222 216 224;
+    --surface-bright: 253 247 255;
+    --surface-container-lowest: 255 255 255;
+    --surface-container-low: 248 242 250;
+    --surface-container: 242 236 244;
+    --surface-container-high: 236 230 238;
+    --surface-container-highest: 230 224 233;
+    --on-surface: 29 27 32;
+    --surface-variant: 231 224 238;
+    --on-surface-variant: 73 69 81;
+    --inverse-surface: 50 47 53;
+    --on-inverse-surface: 245 239 247;
+    --outline: 122 117 130;
+    --outline-variant: 203 196 210;
+    --primary: 79 55 138;
+    --on-primary: 255 255 255;
+    --primary-container: 103 80 164;
+    --on-primary-container: 224 210 255;
+    --inverse-primary: 207 188 255;
+    --secondary: 99 89 124;
+    --on-secondary: 255 255 255;
+    --secondary-container: 225 212 253;
+    --on-secondary-container: 100 90 125;
+    --tertiary: 118 42 91;
+    --on-tertiary: 255 255 255;
+    --tertiary-container: 146 66 116;
+    --on-tertiary-container: 255 202 229;
+    --error: 186 26 26;
+    --on-error: 255 255 255;
+    --error-container: 255 218 214;
+    --on-error-container: 147 0 10;
+    --scrim: 0 0 0;
+    --shadow: 0 0 0;
+    --surface-tint: 103 80 164;
+    --primary-fixed: 233 221 255;
+    --primary-fixed-dim: 207 188 255;
+    --on-primary-fixed: 34 0 93;
+    --on-primary-fixed-variant: 79 55 138;
+    --secondary-fixed: 233 221 255;
+    --secondary-fixed-dim: 205 192 233;
+    --on-secondary-fixed: 31 22 53;
+    --on-secondary-fixed-variant: 75 66 99;
+    --tertiary-fixed: 255 216 234;
+    --tertiary-fixed-dim: 255 174 219;
+    --on-tertiary-fixed: 60 0 43;
+    --on-tertiary-fixed-variant: 117 42 91;
+    --success: 0 109 67;
+    --on-success: 255 255 255;
+    --success-container: 114 252 180;
+    --on-success-container: 0 33 17;
+    --success-fixed: 114 252 180;
+    --success-fixed-dim: 82 223 154;
+    --on-success-fixed: 0 33 17;
+    --on-success-fixed-variant: 0 82 50;
+    --android-background: 253 247 255;
+    --android-on-background: 29 27 32;
+    --android-surface: 253 247 255;
+    --android-surface-dim: 222 216 224;
+    --android-surface-bright: 253 247 255;
+    --android-surface-container-lowest: 255 255 255;
+    --android-surface-container-low: 248 242 250;
+    --android-surface-container: 242 236 244;
+    --android-surface-container-high: 236 230 238;
+    --android-surface-container-highest: 230 224 233;
+    --android-on-surface: 29 27 32;
+    --android-surface-variant: 231 224 238;
+    --android-on-surface-variant: 73 69 81;
+    --android-inverse-surface: 50 47 53;
+    --android-on-inverse-surface: 245 239 247;
+    --android-outline: 122 117 130;
+    --android-outline-variant: 203 196 210;
+    --android-primary: 79 55 138;
+    --android-on-primary: 255 255 255;
+    --android-primary-container: 103 80 164;
+    --android-on-primary-container: 224 210 255;
+    --android-inverse-primary: 207 188 255;
+    --android-secondary: 99 89 124;
+    --android-on-secondary: 255 255 255;
+    --android-secondary-container: 225 212 253;
+    --android-on-secondary-container: 100 90 125;
+    --android-tertiary: 118 42 91;
+    --android-on-tertiary: 255 255 255;
+    --android-tertiary-container: 146 66 116;
+    --android-on-tertiary-container: 255 202 229;
+    --android-error: 186 26 26;
+    --android-on-error: 255 255 255;
+    --android-error-container: 255 218 214;
+    --android-on-error-container: 147 0 10;
+    --android-scrim: 0 0 0;
+    --android-shadow: 0 0 0;
+    --android-surface-tint: 103 80 164;
+    --android-primary-fixed: 233 221 255;
+    --android-primary-fixed-dim: 207 188 255;
+    --android-on-primary-fixed: 34 0 93;
+    --android-on-primary-fixed-variant: 79 55 138;
+    --android-secondary-fixed: 233 221 255;
+    --android-secondary-fixed-dim: 205 192 233;
+    --android-on-secondary-fixed: 31 22 53;
+    --android-on-secondary-fixed-variant: 75 66 99;
+    --android-tertiary-fixed: 255 216 234;
+    --android-tertiary-fixed-dim: 255 174 219;
+    --android-on-tertiary-fixed: 60 0 43;
+    --android-on-tertiary-fixed-variant: 117 42 91;
+    --android-success: 0 109 67;
+    --android-on-success: 255 255 255;
+    --android-success-container: 114 252 180;
+    --android-on-success-container: 0 33 17;
+    --android-success-fixed: 114 252 180;
+    --android-success-fixed-dim: 82 223 154;
+    --android-on-success-fixed: 0 33 17;
+    --android-on-success-fixed-variant: 0 82 50;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 20 18 24;
+      --on-background: 230 224 233;
+      --surface: 20 18 24;
+      --surface-dim: 20 18 24;
+      --surface-bright: 59 56 62;
+      --surface-container-lowest: 15 13 19;
+      --surface-container-low: 29 27 32;
+      --surface-container: 33 31 36;
+      --surface-container-high: 43 41 47;
+      --surface-container-highest: 54 52 58;
+      --on-surface: 230 224 233;
+      --surface-variant: 73 69 81;
+      --on-surface-variant: 203 196 210;
+      --inverse-surface: 230 224 233;
+      --on-inverse-surface: 50 47 53;
+      --outline: 148 142 156;
+      --outline-variant: 73 69 81;
+      --primary: 207 188 255;
+      --on-primary: 56 30 114;
+      --primary-container: 103 80 164;
+      --on-primary-container: 224 210 255;
+      --inverse-primary: 103 80 164;
+      --secondary: 205 192 233;
+      --on-secondary: 52 43 75;
+      --secondary-container: 77 68 101;
+      --on-secondary-container: 191 178 218;
+      --tertiary: 255 174 219;
+      --on-tertiary: 90 18 67;
+      --tertiary-container: 146 66 116;
+      --on-tertiary-container: 255 202 229;
+      --error: 255 180 171;
+      --on-error: 105 0 5;
+      --error-container: 147 0 10;
+      --on-error-container: 255 218 214;
+      --scrim: 0 0 0;
+      --shadow: 0 0 0;
+      --surface-tint: 207 188 255;
+      --primary-fixed: 233 221 255;
+      --primary-fixed-dim: 207 188 255;
+      --on-primary-fixed: 34 0 93;
+      --on-primary-fixed-variant: 79 55 138;
+      --secondary-fixed: 233 221 255;
+      --secondary-fixed-dim: 205 192 233;
+      --on-secondary-fixed: 31 22 53;
+      --on-secondary-fixed-variant: 75 66 99;
+      --tertiary-fixed: 255 216 234;
+      --tertiary-fixed-dim: 255 174 219;
+      --on-tertiary-fixed: 60 0 43;
+      --on-tertiary-fixed-variant: 117 42 91;
+      --success: 82 223 154;
+      --on-success: 0 57 33;
+      --success-container: 0 82 50;
+      --on-success-container: 114 252 180;
+      --success-fixed: 114 252 180;
+      --success-fixed-dim: 82 223 154;
+      --on-success-fixed: 0 33 17;
+      --on-success-fixed-variant: 0 82 50;
+      --android-background: 20 18 24;
+      --android-on-background: 230 224 233;
+      --android-surface: 20 18 24;
+      --android-surface-dim: 20 18 24;
+      --android-surface-bright: 59 56 62;
+      --android-surface-container-lowest: 15 13 19;
+      --android-surface-container-low: 29 27 32;
+      --android-surface-container: 33 31 36;
+      --android-surface-container-high: 43 41 47;
+      --android-surface-container-highest: 54 52 58;
+      --android-on-surface: 230 224 233;
+      --android-surface-variant: 73 69 81;
+      --android-on-surface-variant: 203 196 210;
+      --android-inverse-surface: 230 224 233;
+      --android-on-inverse-surface: 50 47 53;
+      --android-outline: 148 142 156;
+      --android-outline-variant: 73 69 81;
+      --android-primary: 207 188 255;
+      --android-on-primary: 56 30 114;
+      --android-primary-container: 103 80 164;
+      --android-on-primary-container: 224 210 255;
+      --android-inverse-primary: 103 80 164;
+      --android-secondary: 205 192 233;
+      --android-on-secondary: 52 43 75;
+      --android-secondary-container: 77 68 101;
+      --android-on-secondary-container: 191 178 218;
+      --android-tertiary: 255 174 219;
+      --android-on-tertiary: 90 18 67;
+      --android-tertiary-container: 146 66 116;
+      --android-on-tertiary-container: 255 202 229;
+      --android-error: 255 180 171;
+      --android-on-error: 105 0 5;
+      --android-error-container: 147 0 10;
+      --android-on-error-container: 255 218 214;
+      --android-scrim: 0 0 0;
+      --android-shadow: 0 0 0;
+      --android-surface-tint: 207 188 255;
+      --android-primary-fixed: 233 221 255;
+      --android-primary-fixed-dim: 207 188 255;
+      --android-on-primary-fixed: 34 0 93;
+      --android-on-primary-fixed-variant: 79 55 138;
+      --android-secondary-fixed: 233 221 255;
+      --android-secondary-fixed-dim: 205 192 233;
+      --android-on-secondary-fixed: 31 22 53;
+      --android-on-secondary-fixed-variant: 75 66 99;
+      --android-tertiary-fixed: 255 216 234;
+      --android-tertiary-fixed-dim: 255 174 219;
+      --android-on-tertiary-fixed: 60 0 43;
+      --android-on-tertiary-fixed-variant: 117 42 91;
+      --android-success: 82 223 154;
+      --android-on-success: 0 57 33;
+      --android-success-container: 0 82 50;
+      --android-on-success-container: 114 252 180;
+      --android-success-fixed: 114 252 180;
+      --android-success-fixed-dim: 82 223 154;
+      --android-on-success-fixed: 0 33 17;
+      --android-on-success-fixed-variant: 0 82 50;
+    }
+  }
+}
+"
+`;
+
+exports[`snapshot: NativeWind > m3-colors.ts 1`] = `
+"/**
+ * Material 3 colors for NativeWind
+ * Generated by m3-tailwind-colors
+ */
+
+export const COLORS = {
+  light: {
+    background: 'rgb(253, 247, 255)',
+    onBackground: 'rgb(29, 27, 32)',
+    surface: 'rgb(253, 247, 255)',
+    surfaceDim: 'rgb(222, 216, 224)',
+    surfaceBright: 'rgb(253, 247, 255)',
+    surfaceContainerLowest: 'rgb(255, 255, 255)',
+    surfaceContainerLow: 'rgb(248, 242, 250)',
+    surfaceContainer: 'rgb(242, 236, 244)',
+    surfaceContainerHigh: 'rgb(236, 230, 238)',
+    surfaceContainerHighest: 'rgb(230, 224, 233)',
+    onSurface: 'rgb(29, 27, 32)',
+    surfaceVariant: 'rgb(231, 224, 238)',
+    onSurfaceVariant: 'rgb(73, 69, 81)',
+    inverseSurface: 'rgb(50, 47, 53)',
+    onInverseSurface: 'rgb(245, 239, 247)',
+    outline: 'rgb(122, 117, 130)',
+    outlineVariant: 'rgb(203, 196, 210)',
+    primary: 'rgb(79, 55, 138)',
+    onPrimary: 'rgb(255, 255, 255)',
+    primaryContainer: 'rgb(103, 80, 164)',
+    onPrimaryContainer: 'rgb(224, 210, 255)',
+    inversePrimary: 'rgb(207, 188, 255)',
+    secondary: 'rgb(99, 89, 124)',
+    onSecondary: 'rgb(255, 255, 255)',
+    secondaryContainer: 'rgb(225, 212, 253)',
+    onSecondaryContainer: 'rgb(100, 90, 125)',
+    tertiary: 'rgb(118, 42, 91)',
+    onTertiary: 'rgb(255, 255, 255)',
+    tertiaryContainer: 'rgb(146, 66, 116)',
+    onTertiaryContainer: 'rgb(255, 202, 229)',
+    error: 'rgb(186, 26, 26)',
+    onError: 'rgb(255, 255, 255)',
+    errorContainer: 'rgb(255, 218, 214)',
+    onErrorContainer: 'rgb(147, 0, 10)',
+    scrim: 'rgb(0, 0, 0)',
+    shadow: 'rgb(0, 0, 0)',
+    surfaceTint: 'rgb(103, 80, 164)',
+    primaryFixed: 'rgb(233, 221, 255)',
+    primaryFixedDim: 'rgb(207, 188, 255)',
+    onPrimaryFixed: 'rgb(34, 0, 93)',
+    onPrimaryFixedVariant: 'rgb(79, 55, 138)',
+    secondaryFixed: 'rgb(233, 221, 255)',
+    secondaryFixedDim: 'rgb(205, 192, 233)',
+    onSecondaryFixed: 'rgb(31, 22, 53)',
+    onSecondaryFixedVariant: 'rgb(75, 66, 99)',
+    tertiaryFixed: 'rgb(255, 216, 234)',
+    tertiaryFixedDim: 'rgb(255, 174, 219)',
+    onTertiaryFixed: 'rgb(60, 0, 43)',
+    onTertiaryFixedVariant: 'rgb(117, 42, 91)',
+    success: 'rgb(0, 109, 67)',
+    onSuccess: 'rgb(255, 255, 255)',
+    successContainer: 'rgb(114, 252, 180)',
+    onSuccessContainer: 'rgb(0, 33, 17)',
+    successFixed: 'rgb(114, 252, 180)',
+    successFixedDim: 'rgb(82, 223, 154)',
+    onSuccessFixed: 'rgb(0, 33, 17)',
+    onSuccessFixedVariant: 'rgb(0, 82, 50)',
+  },
+  dark: {
+    background: 'rgb(20, 18, 24)',
+    onBackground: 'rgb(230, 224, 233)',
+    surface: 'rgb(20, 18, 24)',
+    surfaceDim: 'rgb(20, 18, 24)',
+    surfaceBright: 'rgb(59, 56, 62)',
+    surfaceContainerLowest: 'rgb(15, 13, 19)',
+    surfaceContainerLow: 'rgb(29, 27, 32)',
+    surfaceContainer: 'rgb(33, 31, 36)',
+    surfaceContainerHigh: 'rgb(43, 41, 47)',
+    surfaceContainerHighest: 'rgb(54, 52, 58)',
+    onSurface: 'rgb(230, 224, 233)',
+    surfaceVariant: 'rgb(73, 69, 81)',
+    onSurfaceVariant: 'rgb(203, 196, 210)',
+    inverseSurface: 'rgb(230, 224, 233)',
+    onInverseSurface: 'rgb(50, 47, 53)',
+    outline: 'rgb(148, 142, 156)',
+    outlineVariant: 'rgb(73, 69, 81)',
+    primary: 'rgb(207, 188, 255)',
+    onPrimary: 'rgb(56, 30, 114)',
+    primaryContainer: 'rgb(103, 80, 164)',
+    onPrimaryContainer: 'rgb(224, 210, 255)',
+    inversePrimary: 'rgb(103, 80, 164)',
+    secondary: 'rgb(205, 192, 233)',
+    onSecondary: 'rgb(52, 43, 75)',
+    secondaryContainer: 'rgb(77, 68, 101)',
+    onSecondaryContainer: 'rgb(191, 178, 218)',
+    tertiary: 'rgb(255, 174, 219)',
+    onTertiary: 'rgb(90, 18, 67)',
+    tertiaryContainer: 'rgb(146, 66, 116)',
+    onTertiaryContainer: 'rgb(255, 202, 229)',
+    error: 'rgb(255, 180, 171)',
+    onError: 'rgb(105, 0, 5)',
+    errorContainer: 'rgb(147, 0, 10)',
+    onErrorContainer: 'rgb(255, 218, 214)',
+    scrim: 'rgb(0, 0, 0)',
+    shadow: 'rgb(0, 0, 0)',
+    surfaceTint: 'rgb(207, 188, 255)',
+    primaryFixed: 'rgb(233, 221, 255)',
+    primaryFixedDim: 'rgb(207, 188, 255)',
+    onPrimaryFixed: 'rgb(34, 0, 93)',
+    onPrimaryFixedVariant: 'rgb(79, 55, 138)',
+    secondaryFixed: 'rgb(233, 221, 255)',
+    secondaryFixedDim: 'rgb(205, 192, 233)',
+    onSecondaryFixed: 'rgb(31, 22, 53)',
+    onSecondaryFixedVariant: 'rgb(75, 66, 99)',
+    tertiaryFixed: 'rgb(255, 216, 234)',
+    tertiaryFixedDim: 'rgb(255, 174, 219)',
+    onTertiaryFixed: 'rgb(60, 0, 43)',
+    onTertiaryFixedVariant: 'rgb(117, 42, 91)',
+    success: 'rgb(82, 223, 154)',
+    onSuccess: 'rgb(0, 57, 33)',
+    successContainer: 'rgb(0, 82, 50)',
+    onSuccessContainer: 'rgb(114, 252, 180)',
+    successFixed: 'rgb(114, 252, 180)',
+    successFixedDim: 'rgb(82, 223, 154)',
+    onSuccessFixed: 'rgb(0, 33, 17)',
+    onSuccessFixedVariant: 'rgb(0, 82, 50)',
+  },
+} as const;
+
+export type ColorScheme = keyof typeof COLORS;
+export type ColorName = keyof typeof COLORS.light;
+"
+`;
+
+exports[`snapshot: React Native > camelCase 1`] = `
+{
+  "dark": {
+    "background": "#141218",
+    "error": "#ffb4ab",
+    "errorContainer": "#93000a",
+    "inversePrimary": "#6750a4",
+    "inverseSurface": "#e6e0e9",
+    "onBackground": "#e6e0e9",
+    "onError": "#690005",
+    "onErrorContainer": "#ffdad6",
+    "onInverseSurface": "#322f35",
+    "onPrimary": "#381e72",
+    "onPrimaryContainer": "#e0d2ff",
+    "onPrimaryFixed": "#22005d",
+    "onPrimaryFixedVariant": "#4f378a",
+    "onSecondary": "#342b4b",
+    "onSecondaryContainer": "#bfb2da",
+    "onSecondaryFixed": "#1f1635",
+    "onSecondaryFixedVariant": "#4b4263",
+    "onSuccess": "#003921",
+    "onSuccessContainer": "#72fcb4",
+    "onSuccessFixed": "#002111",
+    "onSuccessFixedVariant": "#005232",
+    "onSurface": "#e6e0e9",
+    "onSurfaceVariant": "#cbc4d2",
+    "onTertiary": "#5a1243",
+    "onTertiaryContainer": "#ffcae5",
+    "onTertiaryFixed": "#3c002b",
+    "onTertiaryFixedVariant": "#752a5b",
+    "outline": "#948e9c",
+    "outlineVariant": "#494551",
+    "primary": "#cfbcff",
+    "primaryContainer": "#6750a4",
+    "primaryFixed": "#e9ddff",
+    "primaryFixedDim": "#cfbcff",
+    "scrim": "#000000",
+    "secondary": "#cdc0e9",
+    "secondaryContainer": "#4d4465",
+    "secondaryFixed": "#e9ddff",
+    "secondaryFixedDim": "#cdc0e9",
+    "shadow": "#000000",
+    "success": "#52df9a",
+    "successContainer": "#005232",
+    "successFixed": "#72fcb4",
+    "successFixedDim": "#52df9a",
+    "surface": "#141218",
+    "surfaceBright": "#3b383e",
+    "surfaceContainer": "#211f24",
+    "surfaceContainerHigh": "#2b292f",
+    "surfaceContainerHighest": "#36343a",
+    "surfaceContainerLow": "#1d1b20",
+    "surfaceContainerLowest": "#0f0d13",
+    "surfaceDim": "#141218",
+    "surfaceTint": "#cfbcff",
+    "surfaceVariant": "#494551",
+    "tertiary": "#ffaedb",
+    "tertiaryContainer": "#924274",
+    "tertiaryFixed": "#ffd8ea",
+    "tertiaryFixedDim": "#ffaedb",
+  },
+  "light": {
+    "background": "#fdf7ff",
+    "error": "#ba1a1a",
+    "errorContainer": "#ffdad6",
+    "inversePrimary": "#cfbcff",
+    "inverseSurface": "#322f35",
+    "onBackground": "#1d1b20",
+    "onError": "#ffffff",
+    "onErrorContainer": "#93000a",
+    "onInverseSurface": "#f5eff7",
+    "onPrimary": "#ffffff",
+    "onPrimaryContainer": "#e0d2ff",
+    "onPrimaryFixed": "#22005d",
+    "onPrimaryFixedVariant": "#4f378a",
+    "onSecondary": "#ffffff",
+    "onSecondaryContainer": "#645a7d",
+    "onSecondaryFixed": "#1f1635",
+    "onSecondaryFixedVariant": "#4b4263",
+    "onSuccess": "#ffffff",
+    "onSuccessContainer": "#002111",
+    "onSuccessFixed": "#002111",
+    "onSuccessFixedVariant": "#005232",
+    "onSurface": "#1d1b20",
+    "onSurfaceVariant": "#494551",
+    "onTertiary": "#ffffff",
+    "onTertiaryContainer": "#ffcae5",
+    "onTertiaryFixed": "#3c002b",
+    "onTertiaryFixedVariant": "#752a5b",
+    "outline": "#7a7582",
+    "outlineVariant": "#cbc4d2",
+    "primary": "#4f378a",
+    "primaryContainer": "#6750a4",
+    "primaryFixed": "#e9ddff",
+    "primaryFixedDim": "#cfbcff",
+    "scrim": "#000000",
+    "secondary": "#63597c",
+    "secondaryContainer": "#e1d4fd",
+    "secondaryFixed": "#e9ddff",
+    "secondaryFixedDim": "#cdc0e9",
+    "shadow": "#000000",
+    "success": "#006d43",
+    "successContainer": "#72fcb4",
+    "successFixed": "#72fcb4",
+    "successFixedDim": "#52df9a",
+    "surface": "#fdf7ff",
+    "surfaceBright": "#fdf7ff",
+    "surfaceContainer": "#f2ecf4",
+    "surfaceContainerHigh": "#ece6ee",
+    "surfaceContainerHighest": "#e6e0e9",
+    "surfaceContainerLow": "#f8f2fa",
+    "surfaceContainerLowest": "#ffffff",
+    "surfaceDim": "#ded8e0",
+    "surfaceTint": "#6750a4",
+    "surfaceVariant": "#e7e0ee",
+    "tertiary": "#762a5b",
+    "tertiaryContainer": "#924274",
+    "tertiaryFixed": "#ffd8ea",
+    "tertiaryFixedDim": "#ffaedb",
+  },
+}
+`;
+
+exports[`snapshot: React Native > kebab-case 1`] = `
+{
+  "dark": {
+    "background": "#141218",
+    "error": "#ffb4ab",
+    "error-container": "#93000a",
+    "inverse-primary": "#6750a4",
+    "inverse-surface": "#e6e0e9",
+    "on-background": "#e6e0e9",
+    "on-error": "#690005",
+    "on-error-container": "#ffdad6",
+    "on-inverse-surface": "#322f35",
+    "on-primary": "#381e72",
+    "on-primary-container": "#e0d2ff",
+    "on-primary-fixed": "#22005d",
+    "on-primary-fixed-variant": "#4f378a",
+    "on-secondary": "#342b4b",
+    "on-secondary-container": "#bfb2da",
+    "on-secondary-fixed": "#1f1635",
+    "on-secondary-fixed-variant": "#4b4263",
+    "on-success": "#003921",
+    "on-success-container": "#72fcb4",
+    "on-success-fixed": "#002111",
+    "on-success-fixed-variant": "#005232",
+    "on-surface": "#e6e0e9",
+    "on-surface-variant": "#cbc4d2",
+    "on-tertiary": "#5a1243",
+    "on-tertiary-container": "#ffcae5",
+    "on-tertiary-fixed": "#3c002b",
+    "on-tertiary-fixed-variant": "#752a5b",
+    "outline": "#948e9c",
+    "outline-variant": "#494551",
+    "primary": "#cfbcff",
+    "primary-container": "#6750a4",
+    "primary-fixed": "#e9ddff",
+    "primary-fixed-dim": "#cfbcff",
+    "scrim": "#000000",
+    "secondary": "#cdc0e9",
+    "secondary-container": "#4d4465",
+    "secondary-fixed": "#e9ddff",
+    "secondary-fixed-dim": "#cdc0e9",
+    "shadow": "#000000",
+    "success": "#52df9a",
+    "success-container": "#005232",
+    "success-fixed": "#72fcb4",
+    "success-fixed-dim": "#52df9a",
+    "surface": "#141218",
+    "surface-bright": "#3b383e",
+    "surface-container": "#211f24",
+    "surface-container-high": "#2b292f",
+    "surface-container-highest": "#36343a",
+    "surface-container-low": "#1d1b20",
+    "surface-container-lowest": "#0f0d13",
+    "surface-dim": "#141218",
+    "surface-tint": "#cfbcff",
+    "surface-variant": "#494551",
+    "tertiary": "#ffaedb",
+    "tertiary-container": "#924274",
+    "tertiary-fixed": "#ffd8ea",
+    "tertiary-fixed-dim": "#ffaedb",
+  },
+  "light": {
+    "background": "#fdf7ff",
+    "error": "#ba1a1a",
+    "error-container": "#ffdad6",
+    "inverse-primary": "#cfbcff",
+    "inverse-surface": "#322f35",
+    "on-background": "#1d1b20",
+    "on-error": "#ffffff",
+    "on-error-container": "#93000a",
+    "on-inverse-surface": "#f5eff7",
+    "on-primary": "#ffffff",
+    "on-primary-container": "#e0d2ff",
+    "on-primary-fixed": "#22005d",
+    "on-primary-fixed-variant": "#4f378a",
+    "on-secondary": "#ffffff",
+    "on-secondary-container": "#645a7d",
+    "on-secondary-fixed": "#1f1635",
+    "on-secondary-fixed-variant": "#4b4263",
+    "on-success": "#ffffff",
+    "on-success-container": "#002111",
+    "on-success-fixed": "#002111",
+    "on-success-fixed-variant": "#005232",
+    "on-surface": "#1d1b20",
+    "on-surface-variant": "#494551",
+    "on-tertiary": "#ffffff",
+    "on-tertiary-container": "#ffcae5",
+    "on-tertiary-fixed": "#3c002b",
+    "on-tertiary-fixed-variant": "#752a5b",
+    "outline": "#7a7582",
+    "outline-variant": "#cbc4d2",
+    "primary": "#4f378a",
+    "primary-container": "#6750a4",
+    "primary-fixed": "#e9ddff",
+    "primary-fixed-dim": "#cfbcff",
+    "scrim": "#000000",
+    "secondary": "#63597c",
+    "secondary-container": "#e1d4fd",
+    "secondary-fixed": "#e9ddff",
+    "secondary-fixed-dim": "#cdc0e9",
+    "shadow": "#000000",
+    "success": "#006d43",
+    "success-container": "#72fcb4",
+    "success-fixed": "#72fcb4",
+    "success-fixed-dim": "#52df9a",
+    "surface": "#fdf7ff",
+    "surface-bright": "#fdf7ff",
+    "surface-container": "#f2ecf4",
+    "surface-container-high": "#ece6ee",
+    "surface-container-highest": "#e6e0e9",
+    "surface-container-low": "#f8f2fa",
+    "surface-container-lowest": "#ffffff",
+    "surface-dim": "#ded8e0",
+    "surface-tint": "#6750a4",
+    "surface-variant": "#e7e0ee",
+    "tertiary": "#762a5b",
+    "tertiary-container": "#924274",
+    "tertiary-fixed": "#ffd8ea",
+    "tertiary-fixed-dim": "#ffaedb",
+  },
+}
+`;
+
+exports[`snapshot: Tailwind v3 config > camelCase 1`] = `
+{
+  "background": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#141218",
+  },
+  "error": {
+    "DEFAULT": "#ba1a1a",
+    "dark": "#ffb4ab",
+  },
+  "errorContainer": {
+    "DEFAULT": "#ffdad6",
+    "dark": "#93000a",
+  },
+  "inversePrimary": {
+    "DEFAULT": "#cfbcff",
+    "dark": "#6750a4",
+  },
+  "inverseSurface": {
+    "DEFAULT": "#322f35",
+    "dark": "#e6e0e9",
+  },
+  "onBackground": {
+    "DEFAULT": "#1d1b20",
+    "dark": "#e6e0e9",
+  },
+  "onError": {
+    "DEFAULT": "#ffffff",
+    "dark": "#690005",
+  },
+  "onErrorContainer": {
+    "DEFAULT": "#93000a",
+    "dark": "#ffdad6",
+  },
+  "onInverseSurface": {
+    "DEFAULT": "#f5eff7",
+    "dark": "#322f35",
+  },
+  "onPrimary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#381e72",
+  },
+  "onPrimaryContainer": {
+    "DEFAULT": "#e0d2ff",
+    "dark": "#e0d2ff",
+  },
+  "onPrimaryFixed": {
+    "DEFAULT": "#22005d",
+    "dark": "#22005d",
+  },
+  "onPrimaryFixedVariant": {
+    "DEFAULT": "#4f378a",
+    "dark": "#4f378a",
+  },
+  "onSecondary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#342b4b",
+  },
+  "onSecondaryContainer": {
+    "DEFAULT": "#645a7d",
+    "dark": "#bfb2da",
+  },
+  "onSecondaryFixed": {
+    "DEFAULT": "#1f1635",
+    "dark": "#1f1635",
+  },
+  "onSecondaryFixedVariant": {
+    "DEFAULT": "#4b4263",
+    "dark": "#4b4263",
+  },
+  "onSuccess": {
+    "DEFAULT": "#ffffff",
+    "dark": "#003921",
+  },
+  "onSuccessContainer": {
+    "DEFAULT": "#002111",
+    "dark": "#72fcb4",
+  },
+  "onSuccessFixed": {
+    "DEFAULT": "#002111",
+    "dark": "#002111",
+  },
+  "onSuccessFixedVariant": {
+    "DEFAULT": "#005232",
+    "dark": "#005232",
+  },
+  "onSurface": {
+    "DEFAULT": "#1d1b20",
+    "dark": "#e6e0e9",
+  },
+  "onSurfaceVariant": {
+    "DEFAULT": "#494551",
+    "dark": "#cbc4d2",
+  },
+  "onTertiary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#5a1243",
+  },
+  "onTertiaryContainer": {
+    "DEFAULT": "#ffcae5",
+    "dark": "#ffcae5",
+  },
+  "onTertiaryFixed": {
+    "DEFAULT": "#3c002b",
+    "dark": "#3c002b",
+  },
+  "onTertiaryFixedVariant": {
+    "DEFAULT": "#752a5b",
+    "dark": "#752a5b",
+  },
+  "outline": {
+    "DEFAULT": "#7a7582",
+    "dark": "#948e9c",
+  },
+  "outlineVariant": {
+    "DEFAULT": "#cbc4d2",
+    "dark": "#494551",
+  },
+  "primary": {
+    "DEFAULT": "#4f378a",
+    "dark": "#cfbcff",
+  },
+  "primaryContainer": {
+    "DEFAULT": "#6750a4",
+    "dark": "#6750a4",
+  },
+  "primaryFixed": {
+    "DEFAULT": "#e9ddff",
+    "dark": "#e9ddff",
+  },
+  "primaryFixedDim": {
+    "DEFAULT": "#cfbcff",
+    "dark": "#cfbcff",
+  },
+  "scrim": {
+    "DEFAULT": "#000000",
+    "dark": "#000000",
+  },
+  "secondary": {
+    "DEFAULT": "#63597c",
+    "dark": "#cdc0e9",
+  },
+  "secondaryContainer": {
+    "DEFAULT": "#e1d4fd",
+    "dark": "#4d4465",
+  },
+  "secondaryFixed": {
+    "DEFAULT": "#e9ddff",
+    "dark": "#e9ddff",
+  },
+  "secondaryFixedDim": {
+    "DEFAULT": "#cdc0e9",
+    "dark": "#cdc0e9",
+  },
+  "shadow": {
+    "DEFAULT": "#000000",
+    "dark": "#000000",
+  },
+  "success": {
+    "DEFAULT": "#006d43",
+    "dark": "#52df9a",
+  },
+  "successContainer": {
+    "DEFAULT": "#72fcb4",
+    "dark": "#005232",
+  },
+  "successFixed": {
+    "DEFAULT": "#72fcb4",
+    "dark": "#72fcb4",
+  },
+  "successFixedDim": {
+    "DEFAULT": "#52df9a",
+    "dark": "#52df9a",
+  },
+  "surface": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#141218",
+  },
+  "surfaceBright": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#3b383e",
+  },
+  "surfaceContainer": {
+    "DEFAULT": "#f2ecf4",
+    "dark": "#211f24",
+  },
+  "surfaceContainerHigh": {
+    "DEFAULT": "#ece6ee",
+    "dark": "#2b292f",
+  },
+  "surfaceContainerHighest": {
+    "DEFAULT": "#e6e0e9",
+    "dark": "#36343a",
+  },
+  "surfaceContainerLow": {
+    "DEFAULT": "#f8f2fa",
+    "dark": "#1d1b20",
+  },
+  "surfaceContainerLowest": {
+    "DEFAULT": "#ffffff",
+    "dark": "#0f0d13",
+  },
+  "surfaceDim": {
+    "DEFAULT": "#ded8e0",
+    "dark": "#141218",
+  },
+  "surfaceTint": {
+    "DEFAULT": "#6750a4",
+    "dark": "#cfbcff",
+  },
+  "surfaceVariant": {
+    "DEFAULT": "#e7e0ee",
+    "dark": "#494551",
+  },
+  "tertiary": {
+    "DEFAULT": "#762a5b",
+    "dark": "#ffaedb",
+  },
+  "tertiaryContainer": {
+    "DEFAULT": "#924274",
+    "dark": "#924274",
+  },
+  "tertiaryFixed": {
+    "DEFAULT": "#ffd8ea",
+    "dark": "#ffd8ea",
+  },
+  "tertiaryFixedDim": {
+    "DEFAULT": "#ffaedb",
+    "dark": "#ffaedb",
+  },
+}
+`;
+
+exports[`snapshot: Tailwind v3 config > kebab-case 1`] = `
+{
+  "background": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#141218",
+  },
+  "error": {
+    "DEFAULT": "#ba1a1a",
+    "dark": "#ffb4ab",
+  },
+  "error-container": {
+    "DEFAULT": "#ffdad6",
+    "dark": "#93000a",
+  },
+  "inverse-primary": {
+    "DEFAULT": "#cfbcff",
+    "dark": "#6750a4",
+  },
+  "inverse-surface": {
+    "DEFAULT": "#322f35",
+    "dark": "#e6e0e9",
+  },
+  "on-background": {
+    "DEFAULT": "#1d1b20",
+    "dark": "#e6e0e9",
+  },
+  "on-error": {
+    "DEFAULT": "#ffffff",
+    "dark": "#690005",
+  },
+  "on-error-container": {
+    "DEFAULT": "#93000a",
+    "dark": "#ffdad6",
+  },
+  "on-inverse-surface": {
+    "DEFAULT": "#f5eff7",
+    "dark": "#322f35",
+  },
+  "on-primary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#381e72",
+  },
+  "on-primary-container": {
+    "DEFAULT": "#e0d2ff",
+    "dark": "#e0d2ff",
+  },
+  "on-primary-fixed": {
+    "DEFAULT": "#22005d",
+    "dark": "#22005d",
+  },
+  "on-primary-fixed-variant": {
+    "DEFAULT": "#4f378a",
+    "dark": "#4f378a",
+  },
+  "on-secondary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#342b4b",
+  },
+  "on-secondary-container": {
+    "DEFAULT": "#645a7d",
+    "dark": "#bfb2da",
+  },
+  "on-secondary-fixed": {
+    "DEFAULT": "#1f1635",
+    "dark": "#1f1635",
+  },
+  "on-secondary-fixed-variant": {
+    "DEFAULT": "#4b4263",
+    "dark": "#4b4263",
+  },
+  "on-success": {
+    "DEFAULT": "#ffffff",
+    "dark": "#003921",
+  },
+  "on-success-container": {
+    "DEFAULT": "#002111",
+    "dark": "#72fcb4",
+  },
+  "on-success-fixed": {
+    "DEFAULT": "#002111",
+    "dark": "#002111",
+  },
+  "on-success-fixed-variant": {
+    "DEFAULT": "#005232",
+    "dark": "#005232",
+  },
+  "on-surface": {
+    "DEFAULT": "#1d1b20",
+    "dark": "#e6e0e9",
+  },
+  "on-surface-variant": {
+    "DEFAULT": "#494551",
+    "dark": "#cbc4d2",
+  },
+  "on-tertiary": {
+    "DEFAULT": "#ffffff",
+    "dark": "#5a1243",
+  },
+  "on-tertiary-container": {
+    "DEFAULT": "#ffcae5",
+    "dark": "#ffcae5",
+  },
+  "on-tertiary-fixed": {
+    "DEFAULT": "#3c002b",
+    "dark": "#3c002b",
+  },
+  "on-tertiary-fixed-variant": {
+    "DEFAULT": "#752a5b",
+    "dark": "#752a5b",
+  },
+  "outline": {
+    "DEFAULT": "#7a7582",
+    "dark": "#948e9c",
+  },
+  "outline-variant": {
+    "DEFAULT": "#cbc4d2",
+    "dark": "#494551",
+  },
+  "primary": {
+    "DEFAULT": "#4f378a",
+    "dark": "#cfbcff",
+  },
+  "primary-container": {
+    "DEFAULT": "#6750a4",
+    "dark": "#6750a4",
+  },
+  "primary-fixed": {
+    "DEFAULT": "#e9ddff",
+    "dark": "#e9ddff",
+  },
+  "primary-fixed-dim": {
+    "DEFAULT": "#cfbcff",
+    "dark": "#cfbcff",
+  },
+  "scrim": {
+    "DEFAULT": "#000000",
+    "dark": "#000000",
+  },
+  "secondary": {
+    "DEFAULT": "#63597c",
+    "dark": "#cdc0e9",
+  },
+  "secondary-container": {
+    "DEFAULT": "#e1d4fd",
+    "dark": "#4d4465",
+  },
+  "secondary-fixed": {
+    "DEFAULT": "#e9ddff",
+    "dark": "#e9ddff",
+  },
+  "secondary-fixed-dim": {
+    "DEFAULT": "#cdc0e9",
+    "dark": "#cdc0e9",
+  },
+  "shadow": {
+    "DEFAULT": "#000000",
+    "dark": "#000000",
+  },
+  "success": {
+    "DEFAULT": "#006d43",
+    "dark": "#52df9a",
+  },
+  "success-container": {
+    "DEFAULT": "#72fcb4",
+    "dark": "#005232",
+  },
+  "success-fixed": {
+    "DEFAULT": "#72fcb4",
+    "dark": "#72fcb4",
+  },
+  "success-fixed-dim": {
+    "DEFAULT": "#52df9a",
+    "dark": "#52df9a",
+  },
+  "surface": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#141218",
+  },
+  "surface-bright": {
+    "DEFAULT": "#fdf7ff",
+    "dark": "#3b383e",
+  },
+  "surface-container": {
+    "DEFAULT": "#f2ecf4",
+    "dark": "#211f24",
+  },
+  "surface-container-high": {
+    "DEFAULT": "#ece6ee",
+    "dark": "#2b292f",
+  },
+  "surface-container-highest": {
+    "DEFAULT": "#e6e0e9",
+    "dark": "#36343a",
+  },
+  "surface-container-low": {
+    "DEFAULT": "#f8f2fa",
+    "dark": "#1d1b20",
+  },
+  "surface-container-lowest": {
+    "DEFAULT": "#ffffff",
+    "dark": "#0f0d13",
+  },
+  "surface-dim": {
+    "DEFAULT": "#ded8e0",
+    "dark": "#141218",
+  },
+  "surface-tint": {
+    "DEFAULT": "#6750a4",
+    "dark": "#cfbcff",
+  },
+  "surface-variant": {
+    "DEFAULT": "#e7e0ee",
+    "dark": "#494551",
+  },
+  "tertiary": {
+    "DEFAULT": "#762a5b",
+    "dark": "#ffaedb",
+  },
+  "tertiary-container": {
+    "DEFAULT": "#924274",
+    "dark": "#924274",
+  },
+  "tertiary-fixed": {
+    "DEFAULT": "#ffd8ea",
+    "dark": "#ffd8ea",
+  },
+  "tertiary-fixed-dim": {
+    "DEFAULT": "#ffaedb",
+    "dark": "#ffaedb",
+  },
+}
+`;
+
+exports[`snapshot: Tailwind v4 CSS > combined class hex 1`] = `
+"@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: #fdf7ff;
+  --color-on-background: #1d1b20;
+  --color-surface: #fdf7ff;
+  --color-surface-dim: #ded8e0;
+  --color-surface-bright: #fdf7ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f2fa;
+  --color-surface-container: #f2ecf4;
+  --color-surface-container-high: #ece6ee;
+  --color-surface-container-highest: #e6e0e9;
+  --color-on-surface: #1d1b20;
+  --color-surface-variant: #e7e0ee;
+  --color-on-surface-variant: #494551;
+  --color-inverse-surface: #322f35;
+  --color-on-inverse-surface: #f5eff7;
+  --color-outline: #7a7582;
+  --color-outline-variant: #cbc4d2;
+  --color-primary: #4f378a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #cfbcff;
+  --color-secondary: #63597c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e1d4fd;
+  --color-on-secondary-container: #645a7d;
+  --color-tertiary: #762a5b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #924274;
+  --color-on-tertiary-container: #ffcae5;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  --color-surface-tint: #6750a4;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary-fixed: #22005d;
+  --color-on-primary-fixed-variant: #4f378a;
+  --color-secondary-fixed: #e9ddff;
+  --color-secondary-fixed-dim: #cdc0e9;
+  --color-on-secondary-fixed: #1f1635;
+  --color-on-secondary-fixed-variant: #4b4263;
+  --color-tertiary-fixed: #ffd8ea;
+  --color-tertiary-fixed-dim: #ffaedb;
+  --color-on-tertiary-fixed: #3c002b;
+  --color-on-tertiary-fixed-variant: #752a5b;
+  --color-success: #006d43;
+  --color-on-success: #ffffff;
+  --color-success-container: #72fcb4;
+  --color-on-success-container: #002111;
+  --color-success-fixed: #72fcb4;
+  --color-success-fixed-dim: #52df9a;
+  --color-on-success-fixed: #002111;
+  --color-on-success-fixed-variant: #005232;
+}
+
+@variant dark {
+  --color-background: #141218;
+  --color-on-background: #e6e0e9;
+  --color-surface: #141218;
+  --color-surface-dim: #141218;
+  --color-surface-bright: #3b383e;
+  --color-surface-container-lowest: #0f0d13;
+  --color-surface-container-low: #1d1b20;
+  --color-surface-container: #211f24;
+  --color-surface-container-high: #2b292f;
+  --color-surface-container-highest: #36343a;
+  --color-on-surface: #e6e0e9;
+  --color-surface-variant: #494551;
+  --color-on-surface-variant: #cbc4d2;
+  --color-inverse-surface: #e6e0e9;
+  --color-on-inverse-surface: #322f35;
+  --color-outline: #948e9c;
+  --color-outline-variant: #494551;
+  --color-primary: #cfbcff;
+  --color-on-primary: #381e72;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #6750a4;
+  --color-secondary: #cdc0e9;
+  --color-on-secondary: #342b4b;
+  --color-secondary-container: #4d4465;
+  --color-on-secondary-container: #bfb2da;
+  --color-tertiary: #ffaedb;
+  --color-on-tertiary: #5a1243;
+  --color-tertiary-container: #924274;
+  --color-on-tertiary-container: #ffcae5;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  --color-surface-tint: #cfbcff;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary-fixed: #22005d;
+  --color-on-primary-fixed-variant: #4f378a;
+  --color-secondary-fixed: #e9ddff;
+  --color-secondary-fixed-dim: #cdc0e9;
+  --color-on-secondary-fixed: #1f1635;
+  --color-on-secondary-fixed-variant: #4b4263;
+  --color-tertiary-fixed: #ffd8ea;
+  --color-tertiary-fixed-dim: #ffaedb;
+  --color-on-tertiary-fixed: #3c002b;
+  --color-on-tertiary-fixed-variant: #752a5b;
+  --color-success: #52df9a;
+  --color-on-success: #003921;
+  --color-success-container: #005232;
+  --color-on-success-container: #72fcb4;
+  --color-success-fixed: #72fcb4;
+  --color-success-fixed-dim: #52df9a;
+  --color-on-success-fixed: #002111;
+  --color-on-success-fixed-variant: #005232;
+}"
+`;
+
+exports[`snapshot: Tailwind v4 CSS > combined media hex 1`] = `
+"@theme {
+  --color-background: #fdf7ff;
+  --color-on-background: #1d1b20;
+  --color-surface: #fdf7ff;
+  --color-surface-dim: #ded8e0;
+  --color-surface-bright: #fdf7ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f2fa;
+  --color-surface-container: #f2ecf4;
+  --color-surface-container-high: #ece6ee;
+  --color-surface-container-highest: #e6e0e9;
+  --color-on-surface: #1d1b20;
+  --color-surface-variant: #e7e0ee;
+  --color-on-surface-variant: #494551;
+  --color-inverse-surface: #322f35;
+  --color-on-inverse-surface: #f5eff7;
+  --color-outline: #7a7582;
+  --color-outline-variant: #cbc4d2;
+  --color-primary: #4f378a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #cfbcff;
+  --color-secondary: #63597c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e1d4fd;
+  --color-on-secondary-container: #645a7d;
+  --color-tertiary: #762a5b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #924274;
+  --color-on-tertiary-container: #ffcae5;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  --color-surface-tint: #6750a4;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary-fixed: #22005d;
+  --color-on-primary-fixed-variant: #4f378a;
+  --color-secondary-fixed: #e9ddff;
+  --color-secondary-fixed-dim: #cdc0e9;
+  --color-on-secondary-fixed: #1f1635;
+  --color-on-secondary-fixed-variant: #4b4263;
+  --color-tertiary-fixed: #ffd8ea;
+  --color-tertiary-fixed-dim: #ffaedb;
+  --color-on-tertiary-fixed: #3c002b;
+  --color-on-tertiary-fixed-variant: #752a5b;
+  --color-success: #006d43;
+  --color-on-success: #ffffff;
+  --color-success-container: #72fcb4;
+  --color-on-success-container: #002111;
+  --color-success-fixed: #72fcb4;
+  --color-success-fixed-dim: #52df9a;
+  --color-on-success-fixed: #002111;
+  --color-on-success-fixed-variant: #005232;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #141218;
+    --color-on-background: #e6e0e9;
+    --color-surface: #141218;
+    --color-surface-dim: #141218;
+    --color-surface-bright: #3b383e;
+    --color-surface-container-lowest: #0f0d13;
+    --color-surface-container-low: #1d1b20;
+    --color-surface-container: #211f24;
+    --color-surface-container-high: #2b292f;
+    --color-surface-container-highest: #36343a;
+    --color-on-surface: #e6e0e9;
+    --color-surface-variant: #494551;
+    --color-on-surface-variant: #cbc4d2;
+    --color-inverse-surface: #e6e0e9;
+    --color-on-inverse-surface: #322f35;
+    --color-outline: #948e9c;
+    --color-outline-variant: #494551;
+    --color-primary: #cfbcff;
+    --color-on-primary: #381e72;
+    --color-primary-container: #6750a4;
+    --color-on-primary-container: #e0d2ff;
+    --color-inverse-primary: #6750a4;
+    --color-secondary: #cdc0e9;
+    --color-on-secondary: #342b4b;
+    --color-secondary-container: #4d4465;
+    --color-on-secondary-container: #bfb2da;
+    --color-tertiary: #ffaedb;
+    --color-on-tertiary: #5a1243;
+    --color-tertiary-container: #924274;
+    --color-on-tertiary-container: #ffcae5;
+    --color-error: #ffb4ab;
+    --color-on-error: #690005;
+    --color-error-container: #93000a;
+    --color-on-error-container: #ffdad6;
+    --color-scrim: #000000;
+    --color-shadow: #000000;
+    --color-surface-tint: #cfbcff;
+    --color-primary-fixed: #e9ddff;
+    --color-primary-fixed-dim: #cfbcff;
+    --color-on-primary-fixed: #22005d;
+    --color-on-primary-fixed-variant: #4f378a;
+    --color-secondary-fixed: #e9ddff;
+    --color-secondary-fixed-dim: #cdc0e9;
+    --color-on-secondary-fixed: #1f1635;
+    --color-on-secondary-fixed-variant: #4b4263;
+    --color-tertiary-fixed: #ffd8ea;
+    --color-tertiary-fixed-dim: #ffaedb;
+    --color-on-tertiary-fixed: #3c002b;
+    --color-on-tertiary-fixed-variant: #752a5b;
+    --color-success: #52df9a;
+    --color-on-success: #003921;
+    --color-success-container: #005232;
+    --color-on-success-container: #72fcb4;
+    --color-success-fixed: #72fcb4;
+    --color-success-fixed-dim: #52df9a;
+    --color-on-success-fixed: #002111;
+    --color-on-success-fixed-variant: #005232;
+  }
+}"
+`;
+
+exports[`snapshot: Tailwind v4 CSS > combined media oklch 1`] = `
+"@theme {
+  --color-background: oklch(0.98 0.06 298.10);
+  --color-on-background: oklch(0.10 0.05 300.86);
+  --color-surface: oklch(0.98 0.06 298.10);
+  --color-surface-dim: oklch(0.87 0.06 300.97);
+  --color-surface-bright: oklch(0.98 0.06 298.10);
+  --color-surface-container-lowest: oklch(1.00 0.03 209.49);
+  --color-surface-container-low: oklch(0.96 0.06 298.56);
+  --color-surface-container: oklch(0.94 0.06 299.12);
+  --color-surface-container-high: oklch(0.92 0.06 299.67);
+  --color-surface-container-highest: oklch(0.90 0.07 299.03);
+  --color-on-surface: oklch(0.10 0.05 300.86);
+  --color-surface-variant: oklch(0.90 0.10 298.71);
+  --color-on-surface-variant: oklch(0.30 0.10 298.72);
+  --color-inverse-surface: oklch(0.20 0.06 303.93);
+  --color-on-inverse-surface: oklch(0.95 0.06 298.84);
+  --color-outline: oklch(0.50 0.10 298.72);
+  --color-outline-variant: oklch(0.80 0.10 300.24);
+  --color-primary: oklch(0.30 0.48 299.37);
+  --color-on-primary: oklch(1.00 0.03 209.49);
+  --color-primary-container: oklch(0.40 0.48 298.98);
+  --color-on-primary-container: oklch(0.87 0.26 299.11);
+  --color-inverse-primary: oklch(0.80 0.37 299.10);
+  --color-secondary: oklch(0.40 0.24 299.23);
+  --color-on-secondary: oklch(1.00 0.03 209.49);
+  --color-secondary-container: oklch(0.87 0.24 299.01);
+  --color-on-secondary-container: oklch(0.40 0.24 299.22);
+  --color-tertiary: oklch(0.30 0.48 347.23);
+  --color-on-tertiary: oklch(1.00 0.03 209.49);
+  --color-tertiary-container: oklch(0.40 0.48 346.94);
+  --color-on-tertiary-container: oklch(0.87 0.25 346.78);
+  --color-error: oklch(0.40 0.84 25.06);
+  --color-on-error: oklch(1.00 0.03 209.49);
+  --color-error-container: oklch(0.90 0.13 23.80);
+  --color-on-error-container: oklch(0.30 0.79 24.94);
+  --color-scrim: oklch(0.00 0.00 0.00);
+  --color-shadow: oklch(0.00 0.00 0.00);
+  --color-surface-tint: oklch(0.40 0.48 298.98);
+  --color-primary-fixed: oklch(0.90 0.20 299.66);
+  --color-primary-fixed-dim: oklch(0.80 0.37 299.10);
+  --color-on-primary-fixed: oklch(0.10 0.48 298.87);
+  --color-on-primary-fixed-variant: oklch(0.30 0.48 299.37);
+  --color-secondary-fixed: oklch(0.90 0.20 299.66);
+  --color-secondary-fixed-dim: oklch(0.80 0.24 299.36);
+  --color-on-secondary-fixed: oklch(0.10 0.24 299.82);
+  --color-on-secondary-fixed-variant: oklch(0.30 0.24 298.87);
+  --color-tertiary-fixed: oklch(0.90 0.18 347.52);
+  --color-tertiary-fixed-dim: oklch(0.80 0.40 346.82);
+  --color-on-tertiary-fixed: oklch(0.10 0.43 347.17);
+  --color-on-tertiary-fixed-variant: oklch(0.30 0.47 346.78);
+  --color-success: oklch(0.40 0.44 160.48);
+  --color-on-success: oklch(1.00 0.03 209.49);
+  --color-success-container: oklch(0.90 0.59 160.79);
+  --color-on-success-container: oklch(0.10 0.23 160.57);
+  --color-success-fixed: oklch(0.90 0.59 160.79);
+  --color-success-fixed-dim: oklch(0.80 0.59 160.90);
+  --color-on-success-fixed: oklch(0.10 0.23 160.57);
+  --color-on-success-fixed-variant: oklch(0.30 0.37 161.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: oklch(0.06 0.07 299.89);
+    --color-on-background: oklch(0.90 0.07 299.03);
+    --color-surface: oklch(0.06 0.07 299.89);
+    --color-surface-dim: oklch(0.06 0.07 299.89);
+    --color-surface-bright: oklch(0.24 0.06 302.79);
+    --color-surface-container-lowest: oklch(0.04 0.07 300.49);
+    --color-surface-container-low: oklch(0.10 0.05 300.86);
+    --color-surface-container: oklch(0.12 0.05 300.25);
+    --color-surface-container-high: oklch(0.17 0.06 297.00);
+    --color-surface-container-highest: oklch(0.22 0.06 295.59);
+    --color-on-surface: oklch(0.90 0.07 299.03);
+    --color-surface-variant: oklch(0.30 0.10 298.72);
+    --color-on-surface-variant: oklch(0.80 0.10 300.24);
+    --color-inverse-surface: oklch(0.90 0.07 299.03);
+    --color-on-inverse-surface: oklch(0.20 0.06 303.93);
+    --color-outline: oklch(0.60 0.10 299.94);
+    --color-outline-variant: oklch(0.30 0.10 298.72);
+    --color-primary: oklch(0.80 0.37 299.10);
+    --color-on-primary: oklch(0.20 0.48 299.38);
+    --color-primary-container: oklch(0.40 0.48 298.98);
+    --color-on-primary-container: oklch(0.87 0.26 299.11);
+    --color-inverse-primary: oklch(0.40 0.48 298.98);
+    --color-secondary: oklch(0.80 0.24 299.36);
+    --color-on-secondary: oklch(0.20 0.24 299.49);
+    --color-secondary-container: oklch(0.31 0.24 298.84);
+    --color-on-secondary-container: oklch(0.75 0.24 299.90);
+    --color-tertiary: oklch(0.80 0.40 346.82);
+    --color-on-tertiary: oklch(0.20 0.47 347.36);
+    --color-tertiary-container: oklch(0.40 0.48 346.94);
+    --color-on-tertiary-container: oklch(0.87 0.25 346.78);
+    --color-error: oklch(0.80 0.29 25.05);
+    --color-on-error: oklch(0.20 0.64 24.84);
+    --color-error-container: oklch(0.30 0.79 24.94);
+    --color-on-error-container: oklch(0.90 0.13 23.80);
+    --color-scrim: oklch(0.00 0.00 0.00);
+    --color-shadow: oklch(0.00 0.00 0.00);
+    --color-surface-tint: oklch(0.80 0.37 299.10);
+    --color-primary-fixed: oklch(0.90 0.20 299.66);
+    --color-primary-fixed-dim: oklch(0.80 0.37 299.10);
+    --color-on-primary-fixed: oklch(0.10 0.48 298.87);
+    --color-on-primary-fixed-variant: oklch(0.30 0.48 299.37);
+    --color-secondary-fixed: oklch(0.90 0.20 299.66);
+    --color-secondary-fixed-dim: oklch(0.80 0.24 299.36);
+    --color-on-secondary-fixed: oklch(0.10 0.24 299.82);
+    --color-on-secondary-fixed-variant: oklch(0.30 0.24 298.87);
+    --color-tertiary-fixed: oklch(0.90 0.18 347.52);
+    --color-tertiary-fixed-dim: oklch(0.80 0.40 346.82);
+    --color-on-tertiary-fixed: oklch(0.10 0.43 347.17);
+    --color-on-tertiary-fixed-variant: oklch(0.30 0.47 346.78);
+    --color-success: oklch(0.80 0.59 160.90);
+    --color-on-success: oklch(0.20 0.30 160.74);
+    --color-success-container: oklch(0.30 0.37 161.06);
+    --color-on-success-container: oklch(0.90 0.59 160.79);
+    --color-success-fixed: oklch(0.90 0.59 160.79);
+    --color-success-fixed-dim: oklch(0.80 0.59 160.90);
+    --color-on-success-fixed: oklch(0.10 0.23 160.57);
+    --color-on-success-fixed-variant: oklch(0.30 0.37 161.06);
+  }
+}"
+`;
+
+exports[`snapshot: Tailwind v4 CSS > dark only hex 1`] = `
+"@theme {
+  --color-background: #141218;
+  --color-on-background: #e6e0e9;
+  --color-surface: #141218;
+  --color-surface-dim: #141218;
+  --color-surface-bright: #3b383e;
+  --color-surface-container-lowest: #0f0d13;
+  --color-surface-container-low: #1d1b20;
+  --color-surface-container: #211f24;
+  --color-surface-container-high: #2b292f;
+  --color-surface-container-highest: #36343a;
+  --color-on-surface: #e6e0e9;
+  --color-surface-variant: #494551;
+  --color-on-surface-variant: #cbc4d2;
+  --color-inverse-surface: #e6e0e9;
+  --color-on-inverse-surface: #322f35;
+  --color-outline: #948e9c;
+  --color-outline-variant: #494551;
+  --color-primary: #cfbcff;
+  --color-on-primary: #381e72;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #6750a4;
+  --color-secondary: #cdc0e9;
+  --color-on-secondary: #342b4b;
+  --color-secondary-container: #4d4465;
+  --color-on-secondary-container: #bfb2da;
+  --color-tertiary: #ffaedb;
+  --color-on-tertiary: #5a1243;
+  --color-tertiary-container: #924274;
+  --color-on-tertiary-container: #ffcae5;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  --color-surface-tint: #cfbcff;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary-fixed: #22005d;
+  --color-on-primary-fixed-variant: #4f378a;
+  --color-secondary-fixed: #e9ddff;
+  --color-secondary-fixed-dim: #cdc0e9;
+  --color-on-secondary-fixed: #1f1635;
+  --color-on-secondary-fixed-variant: #4b4263;
+  --color-tertiary-fixed: #ffd8ea;
+  --color-tertiary-fixed-dim: #ffaedb;
+  --color-on-tertiary-fixed: #3c002b;
+  --color-on-tertiary-fixed-variant: #752a5b;
+  --color-success: #52df9a;
+  --color-on-success: #003921;
+  --color-success-container: #005232;
+  --color-on-success-container: #72fcb4;
+  --color-success-fixed: #72fcb4;
+  --color-success-fixed-dim: #52df9a;
+  --color-on-success-fixed: #002111;
+  --color-on-success-fixed-variant: #005232;
+}"
+`;
+
+exports[`snapshot: Tailwind v4 CSS > light only hex 1`] = `
+"@theme {
+  --color-background: #fdf7ff;
+  --color-on-background: #1d1b20;
+  --color-surface: #fdf7ff;
+  --color-surface-dim: #ded8e0;
+  --color-surface-bright: #fdf7ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f8f2fa;
+  --color-surface-container: #f2ecf4;
+  --color-surface-container-high: #ece6ee;
+  --color-surface-container-highest: #e6e0e9;
+  --color-on-surface: #1d1b20;
+  --color-surface-variant: #e7e0ee;
+  --color-on-surface-variant: #494551;
+  --color-inverse-surface: #322f35;
+  --color-on-inverse-surface: #f5eff7;
+  --color-outline: #7a7582;
+  --color-outline-variant: #cbc4d2;
+  --color-primary: #4f378a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #6750a4;
+  --color-on-primary-container: #e0d2ff;
+  --color-inverse-primary: #cfbcff;
+  --color-secondary: #63597c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e1d4fd;
+  --color-on-secondary-container: #645a7d;
+  --color-tertiary: #762a5b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #924274;
+  --color-on-tertiary-container: #ffcae5;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+  --color-surface-tint: #6750a4;
+  --color-primary-fixed: #e9ddff;
+  --color-primary-fixed-dim: #cfbcff;
+  --color-on-primary-fixed: #22005d;
+  --color-on-primary-fixed-variant: #4f378a;
+  --color-secondary-fixed: #e9ddff;
+  --color-secondary-fixed-dim: #cdc0e9;
+  --color-on-secondary-fixed: #1f1635;
+  --color-on-secondary-fixed-variant: #4b4263;
+  --color-tertiary-fixed: #ffd8ea;
+  --color-tertiary-fixed-dim: #ffaedb;
+  --color-on-tertiary-fixed: #3c002b;
+  --color-on-tertiary-fixed-variant: #752a5b;
+  --color-success: #006d43;
+  --color-on-success: #ffffff;
+  --color-success-container: #72fcb4;
+  --color-on-success-container: #002111;
+  --color-success-fixed: #72fcb4;
+  --color-success-fixed-dim: #52df9a;
+  --color-on-success-fixed: #002111;
+  --color-on-success-fixed-variant: #005232;
+}"
+`;

@@ -2,6 +2,7 @@ import {
     argbFromHex,
     hexFromArgb,
     customColor,
+    CorePalette,
     DynamicColor,
 } from "@material/material-color-utilities";
 import { AllMaterialDynamicColors, getSchemeObject } from "./scheme-utils";
@@ -73,11 +74,22 @@ export const generateColors = (
             typeof value === "string" ? { hex: value } : value;
         const hex = colorConfig.hex || "";
         const blend = colorConfig.harmonize ?? true;
-        const customScheme = customColor(source, {
+        const customColorGroup = customColor(source, {
             value: argbFromHex(hex),
             blend,
             name: "",
-        })[isDark ? "dark" : "light"];
+        });
+        const customScheme = customColorGroup[isDark ? "dark" : "light"];
+        // Fixed roles use the same tonal palette as the rest of the custom
+        // color (harmonized source, CorePalette.a1), so they never vary
+        // between light and dark schemes.
+        const fixedPalette = CorePalette.of(customColorGroup.value).a1;
+        const fixed = {
+            base: hexFromArgb(fixedPalette.tone(90)),
+            dim: hexFromArgb(fixedPalette.tone(80)),
+            on: hexFromArgb(fixedPalette.tone(10)),
+            onVariant: hexFromArgb(fixedPalette.tone(30)),
+        };
 
         if (useKebabCase) {
             const kebabName = toKebabCase(colorName);
@@ -89,17 +101,27 @@ export const generateColors = (
             colors[`on-${kebabName}-container`] = hexFromArgb(
                 customScheme.onColorContainer
             );
+            colors[`${kebabName}-fixed`] = fixed.base;
+            colors[`${kebabName}-fixed-dim`] = fixed.dim;
+            colors[`on-${kebabName}-fixed`] = fixed.on;
+            colors[`on-${kebabName}-fixed-variant`] = fixed.onVariant;
         } else {
-            const camelCaseName =
+            const camelName =
+                colorName.charAt(0).toLowerCase() + colorName.slice(1);
+            const pascalName =
                 colorName.charAt(0).toUpperCase() + colorName.slice(1);
-            colors[colorName] = hexFromArgb(customScheme.color);
-            colors[`on${camelCaseName}`] = hexFromArgb(customScheme.onColor);
-            colors[`${camelCaseName}Container`] = hexFromArgb(
+            colors[camelName] = hexFromArgb(customScheme.color);
+            colors[`on${pascalName}`] = hexFromArgb(customScheme.onColor);
+            colors[`${camelName}Container`] = hexFromArgb(
                 customScheme.colorContainer
             );
-            colors[`on${camelCaseName}Container`] = hexFromArgb(
+            colors[`on${pascalName}Container`] = hexFromArgb(
                 customScheme.onColorContainer
             );
+            colors[`${camelName}Fixed`] = fixed.base;
+            colors[`${camelName}FixedDim`] = fixed.dim;
+            colors[`on${pascalName}Fixed`] = fixed.on;
+            colors[`on${pascalName}FixedVariant`] = fixed.onVariant;
         }
     });
 

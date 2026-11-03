@@ -60,6 +60,18 @@ export const AllMaterialDynamicColors: Record<
     scrim: MaterialDynamicColors.scrim,
     shadow: MaterialDynamicColors.shadow,
     surfaceTint: MaterialDynamicColors.surfaceTint,
+    primaryFixed: MaterialDynamicColors.primaryFixed,
+    primaryFixedDim: MaterialDynamicColors.primaryFixedDim,
+    onPrimaryFixed: MaterialDynamicColors.onPrimaryFixed,
+    onPrimaryFixedVariant: MaterialDynamicColors.onPrimaryFixedVariant,
+    secondaryFixed: MaterialDynamicColors.secondaryFixed,
+    secondaryFixedDim: MaterialDynamicColors.secondaryFixedDim,
+    onSecondaryFixed: MaterialDynamicColors.onSecondaryFixed,
+    onSecondaryFixedVariant: MaterialDynamicColors.onSecondaryFixedVariant,
+    tertiaryFixed: MaterialDynamicColors.tertiaryFixed,
+    tertiaryFixedDim: MaterialDynamicColors.tertiaryFixedDim,
+    onTertiaryFixed: MaterialDynamicColors.onTertiaryFixed,
+    onTertiaryFixedVariant: MaterialDynamicColors.onTertiaryFixedVariant,
 };
 
 export const getSchemeObject = (

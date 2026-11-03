@@ -419,13 +419,37 @@ Your existing utility classes continue to work:
 
 The generated color palette includes all Material 3 color tokens:
 
-- **Primary:** primary, on-primary, primary-container, on-primary-container
+- **Primary:** primary, on-primary, primary-container, on-primary-container, inverse-primary
 - **Secondary:** secondary, on-secondary, secondary-container, on-secondary-container
 - **Tertiary:** tertiary, on-tertiary, tertiary-container, on-tertiary-container
+- **Fixed:** primary-fixed, primary-fixed-dim, on-primary-fixed, on-primary-fixed-variant, and the same four for secondary and tertiary
 - **Error:** error, on-error, error-container, on-error-container
-- **Surface:** surface, on-surface, surface-variant, surface-dim, surface-bright
+- **Surface:** surface, on-surface, surface-variant, on-surface-variant, surface-dim, surface-bright, surface-container-lowest, surface-container-low, surface-container, surface-container-high, surface-container-highest, inverse-surface, on-inverse-surface, surface-tint
 - **Background:** background, on-background
 - **Outline:** outline, outline-variant
+- **Other:** scrim, shadow
+
+### Fixed colors
+
+Fixed colors keep the same value in light and dark mode. Use them for elements that should not change
+appearance when the theme switches, such as a brand banner or a chip on a photo:
+
+```html
+<div class="bg-primary-fixed text-on-primary-fixed">Same in light and dark</div>
+```
+
+At the default contrast (`0`) the light and dark values are identical. At higher contrast levels,
+Material 3 may adjust them slightly per mode to keep text readable.
+
+### Custom colors
+
+Each custom color (e.g. `success`) generates eight tokens:
+
+- `success`, `on-success`, `success-container`, `on-success-container`
+- `success-fixed`, `success-fixed-dim`, `on-success-fixed`, `on-success-fixed-variant`
+
+In camelCase output the names are `success`, `onSuccess`, `successContainer`, `onSuccessContainer`,
+`successFixed`, `successFixedDim`, `onSuccessFixed` and `onSuccessFixedVariant`.
 
 ---
 
