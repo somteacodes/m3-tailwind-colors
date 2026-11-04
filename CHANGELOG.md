@@ -2,6 +2,18 @@
 
 
 
+## [0.4.0] - 2026-11-03
+
+### Added
+- **Fixed colors**: Material 3 fixed colors such as `primary-fixed` and `on-primary-fixed`. They stay the same in light and dark mode.
+- **Fixed custom colors**: custom colors get fixed versions too, e.g. `success-fixed`.
+
+### Changed
+- **camelCase custom colors** now always start with a lowercase letter. For example, `SuccessContainer` is now `successContainer`.
+
+### Fixed
+- **CLI version**: `--version` showed `0.2.0` instead of the real version.
+
 ## [0.3.4] - 2026-01-23
 
 ### Fixed

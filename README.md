@@ -113,13 +113,13 @@ npx m3-tailwind-colors generate
 
 **Options:**
 - `--include-tailwind-import` - Include `@import "tailwindcss"` in output
-- `--no-dark-variant` - Exclude `@custom-variant dark` from output
+- `--dark-mode <strategy>` - Dark mode strategy: `media` (default), `class`, or `none`
+- `--target <platform>` - Target platform: `web` (default) or `nativewind`
+- `--colors-output <path>` - Output path for the TypeScript colors file (NativeWind only)
 
-This reads your `m3-colors.config.json` and outputs CSS like:
+This reads your `m3-colors.config.json` and outputs CSS like this (default `media` strategy):
 
 ```css
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme {
   --color-primary: #3b82f6;
   --color-on-primary: #ffffff;
@@ -127,11 +127,31 @@ This reads your `m3-colors.config.json` and outputs CSS like:
   /* ... all Material 3 color tokens */
 }
 
-@variant dark {
-  --color-primary: #60a5fa;
-  /* ... dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #60a5fa;
+    /* ... dark mode colors */
+  }
 }
 ```
+
+With `--dark-mode class`, dark colors apply when a `.dark` class is on an ancestor element:
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #3b82f6;
+  /* ... */
+}
+
+@variant dark {
+  --color-primary: #60a5fa;
+  /* ... */
+}
+```
+
+With `--dark-mode none`, only the light `@theme` block is output.
 
 ### Programmatic API
 
@@ -150,7 +170,7 @@ const css = generateM3ThemeCSS({
   scheme: "content",  // Material scheme type
   contrast: 0,        // -1 to 1
   includeTailwindImport: false, // Include @import "tailwindcss"
-  includeDarkVariant: true      // Include @custom-variant dark
+  darkModeStrategy: "media"     // or "class" or "none"
 });
 
 fs.writeFileSync('./src/theme.css', css);
@@ -419,13 +439,37 @@ Your existing utility classes continue to work:
 
 The generated color palette includes all Material 3 color tokens:
 
-- **Primary:** primary, on-primary, primary-container, on-primary-container
+- **Primary:** primary, on-primary, primary-container, on-primary-container, inverse-primary
 - **Secondary:** secondary, on-secondary, secondary-container, on-secondary-container
 - **Tertiary:** tertiary, on-tertiary, tertiary-container, on-tertiary-container
+- **Fixed:** primary-fixed, primary-fixed-dim, on-primary-fixed, on-primary-fixed-variant, and the same four for secondary and tertiary
 - **Error:** error, on-error, error-container, on-error-container
-- **Surface:** surface, on-surface, surface-variant, surface-dim, surface-bright
+- **Surface:** surface, on-surface, surface-variant, on-surface-variant, surface-dim, surface-bright, surface-container-lowest, surface-container-low, surface-container, surface-container-high, surface-container-highest, inverse-surface, on-inverse-surface, surface-tint
 - **Background:** background, on-background
 - **Outline:** outline, outline-variant
+- **Other:** scrim, shadow
+
+### Fixed colors
+
+Fixed colors keep the same value in light and dark mode. Use them for elements that should not change
+appearance when the theme switches, such as a brand banner or a chip on a photo:
+
+```html
+<div class="bg-primary-fixed text-on-primary-fixed">Same in light and dark</div>
+```
+
+At the default contrast (`0`) the light and dark values are identical. At higher contrast levels,
+Material 3 may adjust them slightly per mode to keep text readable.
+
+### Custom colors
+
+Each custom color (e.g. `success`) generates eight tokens:
+
+- `success`, `on-success`, `success-container`, `on-success-container`
+- `success-fixed`, `success-fixed-dim`, `on-success-fixed`, `on-success-fixed-variant`
+
+In camelCase output the names are `success`, `onSuccess`, `successContainer`, `onSuccessContainer`,
+`successFixed`, `successFixedDim`, `onSuccessFixed` and `onSuccessFixedVariant`.
 
 ---
 
