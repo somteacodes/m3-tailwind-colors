@@ -3,14 +3,32 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     commit-message:
       prefix: "chore(deps)"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 5
+    groups:
+      # One PR a month for all small updates
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+      # Major updates also come as one PR, but separately, since they can break things
+      major:
+        update-types:
+          - "major"
+    ignore:
+      # 0.4.0 fails to load in Node (broken import inside the package)
+      - dependency-name: "@material/material-color-utilities"
+        versions: ["0.4.0"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     commit-message:
       prefix: "chore(deps)"
+    groups:
+      actions:
+        patterns:
+          - "*"
